@@ -25,7 +25,7 @@ const ProjectCard = ({
   tech,
 }: ProjectCardProps) => {
   return (
-    <div className=" group bg-secondary rounded-2xl h-[500px]  max-h-[500px] p-5 flex flex-col gap-5">
+    <div className=" group bg-secondary rounded-2xl h-[500px]  max-h-[500px] p-10 flex flex-col gap-5">
       <div className="header flex flex-row justify-between gap-5">
         <div className="title flex flex-col gap-3">
           <h1 className="text-3xl font-bold text-primary">{title}</h1>
