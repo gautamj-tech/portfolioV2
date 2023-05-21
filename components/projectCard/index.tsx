@@ -8,9 +8,9 @@ import { FaGithub } from "react-icons/fa";
 interface ProjectCardProps {
   title: string;
   description: string;
-  image?: any;
-  link?: string;
-  github?: string;
+  image: any;
+  link: string;
+  github: string;
   category?: string;
   tech?: string[];
 }
@@ -53,7 +53,7 @@ const ProjectCard = ({
           src={image}
           alt={`${title}`}
           fill
-          className="object-cover rounded-2xl saturate-0 group-hover:saturate-100 transition-all duration-500 ease-in-out "
+          className="object-cover rounded-2xl saturate-0 group-hover:saturate-100 transition-all duration-500 ease-in-out group-hover:scale-105 "
         />
       </div>
     </div>
