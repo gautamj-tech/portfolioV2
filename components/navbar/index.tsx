@@ -20,7 +20,7 @@ const Navbar = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <nav className="px-5 py-8 mt-5 flex flex-row justify-between items-center">
+    <nav className="px-5 py-5 mt-5 flex flex-row justify-between items-center sticky top-5 z-50 bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 rounded-3xl">
       <div className="logo">
         {currentTheme === "dark" ? (
           <Image src={LogoLight} alt="logo" />
@@ -28,7 +28,7 @@ const Navbar = () => {
           <Image src={Logo} alt="logo" />
         )}
       </div>
-      <div className="nav-links bg-white py-5 px-10 rounded-full bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 border border-gray-100">
+      <div className="nav-links bg-white py-5 px-10 rounded-full  border border-gray-100">
         <ul className="flex gap-5 text-textPrimary text-lg cursor-pointer px-5 ">
           <li>Home</li>
           <li> Work </li>

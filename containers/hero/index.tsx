@@ -23,13 +23,13 @@ const Hero = (props: any) => {
   });
 
   return (
-    <div className="mt-10 grid grid-cols-5 grid-rows-4 gap-5 grid-flow-row">
-      <div className="col-span-2 bg-secondary rounded-2xl p-8 flex flex-col gap-5 row-span-4">
+    <div className="mt-10 grid grid-cols-5 grid-rows-4 gap-5 grid-flow-row ">
+      <div className=" group col-span-2 bg-secondary rounded-2xl p-8 flex flex-col gap-5 row-span-4 cursor-pointer">
         <div className="image relative h-[450px] w-full">
           <Image
             src={MyImg}
             alt="my"
-            className="rounded-2xl object-cover"
+            className="rounded-2xl object-cover grayscale group-hover:grayscale-0  transition duration-500 ease-in-out "
             fill
           />
         </div>
@@ -98,7 +98,7 @@ const Hero = (props: any) => {
             Some Things I’ve Built
           </h1>
 
-          <BsArrowUpRightCircle className="text-textPrimary text-5xl" />
+          <BsArrowUpRightCircle className="text-textPrimary text-5xl cursor-pointer hover:text-black" />
         </div>
       </div>
     </div>
