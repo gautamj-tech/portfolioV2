@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "@/containers/hero";
-import Work from "@/containers/work";
+import Hero from "@/containers/home/hero";
+import Work from "@/containers/home/work";
 
 export default function Home() {
   return (

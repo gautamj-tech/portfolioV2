@@ -92,13 +92,13 @@ const Hero = (props: any) => {
         </div>
       </div>
 
-      <div className="col-span-3 bg-secondary rounded-2xl p-8 flex flex-col row-span-1">
+      <div className=" group cursor-pointer col-span-3 bg-secondary rounded-2xl p-8 flex flex-col row-span-1">
         <div className="content flex flex-row gap-5 justify-between h-full items-center">
           <h1 className="text-5xl font-bold text-primary">
             Some Things I’ve Built
           </h1>
 
-          <BsArrowUpRightCircle className="text-textPrimary text-5xl cursor-pointer hover:text-black" />
+          <BsArrowUpRightCircle className="  text-textPrimary text-5xl cursor-pointer group-hover:text-black group-hover:rotate-90 transition duration-500 ease-in-out " />
         </div>
       </div>
     </div>

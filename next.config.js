@@ -13,6 +13,7 @@ const nextConfig = {
       "user-images.githubusercontent.com",
       "pbs.twimg.com",
       "localhost",
+      "lumoz-v2.web.app"
     ],
   }
 }
