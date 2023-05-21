@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import MyImg from "@/assets/images/my.jpg";
 import { BsSpotify, BsArrowUpRightCircle } from "react-icons/bs";
@@ -92,13 +93,14 @@ const Hero = (props: any) => {
         </div>
       </div>
 
-      <div className="bg-secondary group cursor-pointer col-span-3  rounded-2xl p-8 flex flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0">
+      <div className="bg-secondary  hover:bg-gradient-to-r from-cyan-500 to-blue-500   group cursor-pointer col-span-3  rounded-2xl p-8 flex flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 ">
         <div className="content flex flex-row gap-5 justify-between h-full items-center">
-          <h1 className="text-5xl font-bold text-primary">
+          <h1 className="text-5xl font-bold text-primary group-hover:text-white">
             Some Things I’ve Built
           </h1>
-
-          <BsArrowUpRightCircle className="  text-textPrimary text-5xl cursor-pointer group-hover:text-black group-hover:rotate-90 transition duration-500 ease-in-out " />
+          <Link href="#work">
+            <BsArrowUpRightCircle className=" group-hover:text-white text-textPrimary text-5xl cursor-pointer group-hover:rotate-90 transition duration-500 ease-in-out " />
+          </Link>
         </div>
       </div>
     </div>

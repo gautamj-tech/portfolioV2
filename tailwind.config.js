@@ -17,7 +17,11 @@ module.exports = {
         secondary: '#F7F7F9',
         textPrimary:"#747474",
         textSecondary:"#949494",
-      }
+      },
+      backgroundImage: {
+        'hero': "url('../public/hero.png')",
+      },
+      
     },
 
     container: {

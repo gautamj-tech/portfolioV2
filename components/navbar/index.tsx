@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Logo from "@/assets/images/logo.png";
 import LogoLight from "@/assets/images/logo-light.png";
+import Link from "next/link";
 import {
   FaFacebookF,
   FaTwitter,
@@ -31,12 +32,26 @@ const Navbar = () => {
       </div>
       <div className="nav-links bg-white py-5 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block">
         <ul className="flex gap-5 text-textPrimary text-lg cursor-pointer px-5 ">
-          <li>Home</li>
-          <li> Work </li>
-          <li> About </li>
-          <li> Guestbook </li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <Link href="/">
+            <li>Home</li>
+          </Link>
+
+          <Link href="#work">
+            <li> Work </li>
+          </Link>
+
+          <Link href="/">
+            <li> About </li>
+          </Link>
+          <Link href="/">
+            <li> Guestbook </li>
+          </Link>
+          <Link href="https://blog.bawantha.me">
+            <li>Blog</li>
+          </Link>
+          <Link href="#contact">
+            <li>Contact</li>
+          </Link>
         </ul>
       </div>
 
