@@ -6,6 +6,18 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
- 
+  scroll-behavior: smooth; 
+}
+
+.marq {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  div {
+    gap: 1rem;
+
+    &:nth-child(8) {
+      margin-right: 1rem;
+    }
+  }
 }
