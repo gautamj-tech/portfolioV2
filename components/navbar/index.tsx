@@ -45,7 +45,7 @@ const Navbar = () => {
           <Link href="/">
             <li> About </li>
           </Link>
-          <Link href="/">
+          <Link href="/guestbook">
             <li> Guestbook </li>
           </Link>
           <Link href="https://blog.bawantha.me">
