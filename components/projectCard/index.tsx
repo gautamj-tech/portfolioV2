@@ -36,13 +36,13 @@ const ProjectCard = ({
         <div className="icons flex gap-5">
           {link && (
             <Link href={`${link}`}>
-              <BsArrowUpRightCircle className="text-5xl text-textPrimary group-hover:text-primary" />
+              <BsArrowUpRightCircle className=" text-3xl  md:text-5xl text-textPrimary group-hover:text-primary" />
             </Link>
           )}
 
           {github && (
             <Link href={`${github}`}>
-              <FaGithub className="text-5xl text-textPrimary group-hover:text-primary" />
+              <FaGithub className="text-3xl  md:text-5xl text-textPrimary group-hover:text-primary" />
             </Link>
           )}
         </div>

@@ -9,6 +9,7 @@ import {
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import { CiDark } from "react-icons/ci";
 import { MdLightMode } from "react-icons/md";
@@ -20,15 +21,15 @@ const Navbar = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <nav className="px-5 py-5 mt-5 flex flex-row justify-between items-center sticky top-5 z-50 bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 rounded-3xl">
+    <nav className="px-5 w-full py-5 mt-5 flex flex-row justify-between items-center sticky top-5 z-50 bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 rounded-3xl ">
       <div className="logo">
         {currentTheme === "dark" ? (
-          <Image src={LogoLight} alt="logo" />
+          <Image src={LogoLight} alt="logo" className="w-5 md:w-10" />
         ) : (
-          <Image src={Logo} alt="logo" />
+          <Image src={Logo} alt="logo" className="w-5 md:w-10" />
         )}
       </div>
-      <div className="nav-links bg-white py-5 px-10 rounded-full  border border-gray-100">
+      <div className="nav-links bg-white py-5 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block">
         <ul className="flex gap-5 text-textPrimary text-lg cursor-pointer px-5 ">
           <li>Home</li>
           <li> Work </li>
@@ -39,7 +40,13 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="social-links flex gap-5">
+      <div className=" block md:hidden">
+        <h3 className="font-bold text-primary dark:text-white">
+          Bawantha Thilan .
+        </h3>
+      </div>
+
+      <div className="social-links  gap-5 hidden sm:hidden md:flex">
         <FaFacebookF className="text-textPrimary text-2xl" />
         <FaTwitter className="text-textPrimary text-2xl" />
         <FaInstagram className="text-textPrimary text-2xl" />
@@ -59,6 +66,10 @@ const Navbar = () => {
             onClick={() => setTheme("dark")}
           />
         )}
+
+        <div className="hamburger block md:hidden">
+          <GiHamburgerMenu className="text-textPrimary text-2xl cursor-pointer" />
+        </div>
       </div>
     </nav>
   );

@@ -43,7 +43,7 @@ const Work = () => {
     <section id="work" className="mt-20">
       <Title title="Work" />
 
-      <div className="slider mt-20 ">
+      <div className="slider mt-10 md:mt-20 ">
         <Swiper
           navigation={true}
           className="mySwiper"

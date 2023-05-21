@@ -23,7 +23,7 @@ const Hero = (props: any) => {
   });
 
   return (
-    <div className="mt-10 grid grid-cols-5 grid-rows-4 gap-5 grid-flow-row ">
+    <div className="mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 grid-rows-4  gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
       <div className=" group col-span-2 bg-secondary rounded-2xl p-8 flex flex-col gap-5 row-span-4 cursor-pointer">
         <div className="image relative h-[450px] w-full">
           <Image
@@ -73,7 +73,7 @@ const Hero = (props: any) => {
           </marquee>
         </div>
       </div>
-      <div className="col-span-3 bg-secondary rounded-2xl p-8 flex flex-col row-span-3">
+      <div className="col-span-3 bg-secondary rounded-2xl p-8 flex flex-col row-span-3 mt-5 sm:mt-5 md:mt-0 lg:mt-0">
         <div className="content flex flex-col gap-5 ">
           <p className="text-primary font-bold text-5xl">
             Software Engineer , Tech Blogger and {""}
@@ -92,7 +92,7 @@ const Hero = (props: any) => {
         </div>
       </div>
 
-      <div className=" group cursor-pointer col-span-3 bg-secondary rounded-2xl p-8 flex flex-col row-span-1">
+      <div className="bg-secondary group cursor-pointer col-span-3  rounded-2xl p-8 flex flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0">
         <div className="content flex flex-row gap-5 justify-between h-full items-center">
           <h1 className="text-5xl font-bold text-primary">
             Some Things I’ve Built

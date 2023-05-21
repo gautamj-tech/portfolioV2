@@ -7,9 +7,9 @@ interface Props {
 
 const BlogCard = ({ post }: Props) => {
   return (
-    <div className="bg-secondary p-10 rounded-3xl">
-      <div className="blog_content grid grid-cols-5 gap-5">
-        <div className="blog_image relative col-span-2">
+    <div className="bg-secondary p-5 md:p-10 rounded-3xl">
+      <div className="blog_content grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-5">
+        <div className="blog_image relative col-span-5 sm:col-span-5 md:col-span-2 lg:col-span-2 h-[400px] sm:h-[400px] md:h-auto lg:h-auto">
           <Image
             src={post.coverImage}
             alt="blog"
