@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="py-5 px-5 bg-secondary ">
       <div className="footer_contents flex justify-between">
-        <h3 className="font-bold text-textPrimary">
+        <h3 className="font-md text-textPrimary">
           &copy; {new Date().getFullYear()} Bawantha Thilan
         </h3>
 
