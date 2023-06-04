@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import MyImg from "@/assets/images/my.jpg";
+import CampNou from "@/assets/images/camp_nou.jpg";
 import { BsSpotify, BsArrowUpRightCircle } from "react-icons/bs";
 import getNowPlayingItem from "@/utils/spotify";
 
@@ -87,20 +88,27 @@ const Hero = (props: any) => {
 
           <div className="buyMeCofee">
             <a href="https://www.buymeacoffee.com/bawanthathilan">
-              <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=bawanthathilan&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff" />
+              <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=bawanthathilan&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="bg-secondary  hover:bg-gradient-to-r from-cyan-500 to-blue-500   group cursor-pointer col-span-3  rounded-2xl p-8 flex flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 ">
-        <div className="content flex flex-row gap-5 justify-between h-full items-center">
-          <h1 className="text-5xl font-bold text-primary group-hover:text-white">
-            Some Things I’ve Built
+      <div className="bg-secondary relative group cursor-pointer col-span-3  rounded-2xl p-8 flex flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[500px] sm:h-[500px] md:h-auto lg:h-auto">
+        <Image
+          src={CampNou}
+          alt="messi"
+          fill
+          className="object-cover rounded-2xl"
+        />
+
+        <div className=" absolute top-0 flex flex-row gap-5 justify-between h-full items-center">
+          <h1 className="text-5xl font-bold text-white ">
+            True Culer . |{" "}
+            <span className=" font-light line-through text-4xl">
+              Visca Barca Visca Catalunya
+            </span>
           </h1>
-          <Link href="#work">
-            <BsArrowUpRightCircle className=" group-hover:text-white text-textPrimary text-5xl cursor-pointer group-hover:rotate-90 transition duration-500 ease-in-out " />
-          </Link>
         </div>
       </div>
     </div>

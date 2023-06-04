@@ -22,17 +22,17 @@ const Navbar = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <nav className="px-5 w-full py-5 mt-5 flex flex-row justify-between items-center sticky top-5 z-50 bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 rounded-3xl ">
+    <nav className="px-5 w-full py-2 mt-5 flex flex-row justify-between items-center sticky top-5 z-50 bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 rounded-3xl ">
       <Link href="/">
         <div className="logo">
           {currentTheme === "dark" ? (
-            <Image src={LogoLight} alt="logo" className="w-5 md:w-10" />
+            <Image src={LogoLight} alt="logo" className="w-5 md:w-6" />
           ) : (
-            <Image src={Logo} alt="logo" className="w-5 md:w-10" />
+            <Image src={Logo} alt="logo" className="w-5 md:w-6" />
           )}
         </div>
       </Link>
-      <div className="nav-links bg-white py-5 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block">
+      <div className="nav-links bg-white py-3 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block">
         <ul className="flex gap-5 text-textPrimary text-lg cursor-pointer px-5 ">
           <Link href="/">
             <li>Home</li>
@@ -42,7 +42,7 @@ const Navbar = () => {
             <li> Work </li>
           </Link>
 
-          <Link href="/">
+          <Link href="/about">
             <li> About </li>
           </Link>
           <Link href="/guestbook">

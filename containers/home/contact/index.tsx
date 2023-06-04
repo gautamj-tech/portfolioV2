@@ -8,7 +8,10 @@ const Contact = () => {
 
       <div className="contact_content bg-secondary p-10 mt-10 md:mt-20 mb-20 rounded-3xl flex flex-col gap-10 relative">
         <h1 className="text-primary text-3xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">
-          <span className="text-textPrimary">Let's do something</span> amazing !
+          <span className="text-textPrimary">
+            Let's do <span className="italic line-through">something</span>
+          </span>{" "}
+          amazing !
         </h1>
 
         <div className="line h-[0.5px] w-1/2 bg-textSecondary hidden md:inline-block lg:inline-block"></div>
