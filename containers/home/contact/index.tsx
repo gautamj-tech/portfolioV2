@@ -8,8 +8,8 @@ const Contact = () => {
 
       <div className="contact_content bg-secondary p-10 mt-10 md:mt-20 mb-20 rounded-3xl flex flex-col gap-10 relative dark:bg-darkBg">
         <h1 className="text-primary text-3xl sm:text-3xl md:text-5xl lg:text-8xl font-bold ">
-          <span className="text-textPrimary dark:text-white">
-            Let's do <span className="italic line-through ">something</span>
+          <span className="text-textPrimary dark:text-white font-normal">
+            Let's do something
           </span>{" "}
           <span className="titleFont dark:text-white">amazing ! </span>
         </h1>
