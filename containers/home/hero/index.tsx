@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import MyImg from "@/assets/images/my.jpg";
 import CampNou from "@/assets/images/camp_nou.jpg";
+import Barca from "@/assets/images/barca.gif";
 import { BsSpotify, BsArrowUpRightCircle } from "react-icons/bs";
 import getNowPlayingItem from "@/utils/spotify";
 
@@ -98,11 +99,18 @@ const Hero = (props: any) => {
 
       <div className="bg-secondary relative group cursor-pointer col-span-3  rounded-2xl p-8 flex flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[500px] sm:h-[500px] md:h-auto lg:h-auto">
         <Image
-          src={CampNou}
+          src={Barca}
           alt="messi"
           fill
+          unoptimized={true}
           className="object-cover rounded-2xl"
         />
+
+        <p>
+          <a href="https://giphy.com/gifs/fcbarcelona-futbol-fc-barcelona-camp-nou-12qVn0zVgCRjpK">
+            via GIPHY
+          </a>
+        </p>
 
         <div className=" absolute top-0 flex flex-row gap-5 justify-between h-full items-center">
           <h1 className="text-5xl font-bold text-white ">
