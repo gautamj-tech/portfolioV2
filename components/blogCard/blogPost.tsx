@@ -18,7 +18,7 @@ const query = `
   `;
 
 export class BlogPosts extends Component {
-  state = {
+  state: any = {
     posts: [],
     loading: true,
   };
