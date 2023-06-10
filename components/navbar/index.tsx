@@ -109,7 +109,43 @@ const Navbar = () => {
             }
             className="drawer"
           >
-            <div>Hello World</div>
+            <div>
+              <ul className="flex flex-col gap-5 text-textPrimary text-lg cursor-pointer px-5 mt-10 ">
+                <Link href="/">
+                  <div className="logo">
+                    {currentTheme === "dark" ? (
+                      <Image
+                        src={LogoLight}
+                        alt="logo"
+                        className="w-5 md:w-6"
+                      />
+                    ) : (
+                      <Image src={Logo} alt="logo" className="w-5 md:w-6" />
+                    )}
+                  </div>
+                </Link>
+                <Link href="/">
+                  <li>Home</li>
+                </Link>
+
+                <Link href="#work">
+                  <li> Work </li>
+                </Link>
+
+                <Link href="/about">
+                  <li> About </li>
+                </Link>
+                <Link href="/guestbook">
+                  <li> Guestbook </li>
+                </Link>
+                <Link href="https://blog.bawantha.me">
+                  <li>Blog</li>
+                </Link>
+                <Link href="#contact">
+                  <li>Contact</li>
+                </Link>
+              </ul>
+            </div>
           </Drawer>
         </div>
       </div>
