@@ -4,9 +4,10 @@ import { createClient } from "@supabase/supabase-js";
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from "../config/keys";
 import { AiOutlineGithub } from "react-icons/ai";
 import ContentLoader from "react-content-loader";
+import Title from "@/components/Title";
 
 const Guestbook = () => {
-  const { data: session } = useSession();
+  const { data: session } = useSession<any>();
   const [loading, setLoading] = useState<boolean>(false);
   const [message, setMessage] = useState<any>("");
   const [userMsg, setUserMsg] = useState<any>([]);
@@ -40,11 +41,11 @@ const Guestbook = () => {
   const createMessage = async (e: any) => {
     e.preventDefault();
     try {
-      const { data, error } = await supabase.from("guestbook").insert([
+      const { data, error }: any = await supabase.from("guestbook").insert([
         {
           message: userMsg,
-          user_id: session.user.id,
-          username: session.user.name,
+          user_id: session?.user?.id,
+          username: session?.user?.name,
         },
       ]);
       setUserMsg("");
@@ -55,12 +56,12 @@ const Guestbook = () => {
   };
 
   return (
-    <div>
-      <div>
-        <span>GuestBook</span>
+    <div className=" h-[100vh] overflow-y-auto mt-10">
+      <div className="bg-secondary p-10 rounded-xl">
+        <Title title="GuestBook" />
       </div>
 
-      <div>
+      <div className="mt-10">
         {session ? (
           <>
             <div>
@@ -110,15 +111,20 @@ const Guestbook = () => {
             </div>
           </>
         ) : (
-          <>
-            <h4>Your are not signed in</h4> <br />
-            <button onClick={() => signIn("github")}>
-              <span>
-                <AiOutlineGithub size={20} />
-              </span>{" "}
-              Sign in with Github
-            </button>
-            <div>
+          <div>
+            <div className=" flex flex-col justify-center">
+              <h4>Your are not signed in</h4> <br />
+              <button
+                onClick={() => signIn("github")}
+                className=" bg-gray-900 flex flex-row justify-center gap-5 rounded-xl text-white px-5 py-3"
+              >
+                <span>
+                  <AiOutlineGithub size={20} />
+                </span>{" "}
+                Sign in with Github
+              </button>
+            </div>
+            <div className="mt-10">
               {loading && (
                 <ContentLoader
                   speed={2}
@@ -135,14 +141,20 @@ const Guestbook = () => {
               )}
               {message &&
                 message.map((item: any, index: number) => (
-                  <div key={index}>
-                    <p style={{ color: "#525252" }}>{item.username} : </p>
+                  <div
+                    key={index}
+                    className="flex flex-row gap-5 bg-secondary p-5 rounded-xl justify-between"
+                  >
+                    <div className="left flex flex-row gap-5">
+                      <p style={{ color: "#525252" }}>{item.username} : </p>
+                      <p>{item.message}</p>
+                    </div>
 
-                    <p>{item.message}</p>
+                    <p style={{ color: "#525252" }}>{item.created_at}</p>
                   </div>
                 ))}
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>

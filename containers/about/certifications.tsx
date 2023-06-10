@@ -10,24 +10,36 @@ const Certifications = () => {
     <div className="mt-20">
       <Title title="Certifications" />
 
-      <div className="card_container grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-5 mt-10 ">
+      <div className="card_container grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
         <Link
           href="https://www.credly.com/badges/09b8c330-9401-48f7-927a-683a5b49df5d/public_url"
           target="_blank"
+          className="group"
         >
           <div className="card bg-secondary p-10 rounded-xl flex justify-center relative dark:bg-darkBg">
             <div className="img relative w-[300px] h-[300px]">
-              <Image src={AZ900} alt="az_900" fill className=" object-cover" />
+              <Image
+                src={AZ900}
+                alt="az_900"
+                fill
+                className=" object-cover transition-all duration-500 ease-in-out group-hover:scale-105"
+              />
             </div>
           </div>
         </Link>
         <Link
           href="https://www.credly.com/badges/98030dab-8152-4ef9-93a4-ee6f7297530e/public_url"
           target="_blank"
+          className=" group"
         >
           <div className="card bg-secondary p-10 rounded-xl flex justify-center  dark:bg-darkBg">
             <div className="img relative w-[300px] h-[300px]">
-              <Image src={CNCF} alt="az_900" fill className=" object-cover" />
+              <Image
+                src={CNCF}
+                alt="az_900"
+                fill
+                className=" object-cover transition-all duration-500 ease-in-out group-hover:scale-105"
+              />
             </div>
           </div>
         </Link>

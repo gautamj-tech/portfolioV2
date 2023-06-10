@@ -31,10 +31,10 @@ const Experience = () => {
     <div className="mt-20">
       <Title title="Work Experiences" />
 
-      <div className="workCard_container mt-10 flex flex-col gap-5 w-full">
+      <div className="workCard_container mt-10 flex flex-col gap-5 w-full ">
         {work?.map((workItem: any, index: number) => (
           <div
-            className="card bg-secondary p-10 rounded-2xl flex flex-row justify-between dark:bg-darkBg"
+            className="card bg-secondary p-10 rounded-2xl flex flex-row justify-between dark:bg-darkBg group"
             key={index}
           >
             <div className="left flex flex-col gap-2 ">
@@ -44,7 +44,7 @@ const Experience = () => {
               <p className="text-gray-600">{workItem.Desc}</p>
             </div>
             <div className="right">
-              <p className="text-white bg-gray-900 px-5 py-2 rounded-xl">
+              <p className="text-white bg-gray-900 px-5 py-2 rounded-xl transition-all duration-500 ease-in-out group-hover:translate-x-2">
                 {workItem.startYear} - {workItem.endYear}
               </p>
             </div>
