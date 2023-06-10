@@ -25,10 +25,12 @@ const ProjectCard = ({
   tech,
 }: ProjectCardProps) => {
   return (
-    <div className=" group bg-secondary rounded-2xl h-[500px]  max-h-[500px] p-10 flex flex-col gap-5">
+    <div className=" group bg-secondary rounded-2xl h-[500px]  max-h-[500px] p-10 flex flex-col gap-5 dark:bg-darkBg">
       <div className="header flex flex-row justify-between gap-5">
         <div className="title flex flex-col gap-3">
-          <h1 className="text-3xl font-bold text-primary">{title}</h1>
+          <h1 className="text-3xl font-bold text-primary dark:text-white">
+            {title}
+          </h1>
           <p className="text-textPrimary font-medium text-lg">{description} </p>
 
           <div className="line w-full h-[1px] bg-textPrimary opacity-10"></div>
@@ -36,13 +38,13 @@ const ProjectCard = ({
         <div className="icons flex gap-5">
           {link && (
             <Link href={`${link}`}>
-              <BsArrowUpRightCircle className=" text-3xl  md:text-5xl text-textPrimary group-hover:text-primary" />
+              <BsArrowUpRightCircle className=" text-3xl  md:text-5xl text-textPrimary group-hover:text-primary dark:group-hover:text-white" />
             </Link>
           )}
 
           {github && (
             <Link href={`${github}`}>
-              <FaGithub className="text-3xl  md:text-5xl text-textPrimary group-hover:text-primary" />
+              <FaGithub className="text-3xl  md:text-5xl text-textPrimary group-hover:text-primary dark:group-hover:text-white" />
             </Link>
           )}
         </div>

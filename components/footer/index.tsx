@@ -3,7 +3,7 @@ import { AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="py-5 px-5 bg-secondary ">
+    <footer className="py-5 px-5 bg-secondary  dark:bg-darkBg">
       <div className="footer_contents flex justify-between">
         <h3 className="font-md text-textPrimary">
           &copy; {new Date().getFullYear()} Bawantha Thilan

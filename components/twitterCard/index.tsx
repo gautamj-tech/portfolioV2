@@ -11,7 +11,7 @@ interface TwitterCardProps {
 
 const TwitterCard = ({ name, handle, comment, linkedin }: TwitterCardProps) => {
   return (
-    <div className=" group bg-secondary px-10 py-5 rounded-3xl flex flex-col gap-5 hover:bg-blue-400 cursor-pointer">
+    <div className=" group bg-secondary px-10 py-5 rounded-3xl flex flex-col gap-5 hover:bg-blue-400 cursor-pointer dark:bg-darkBg">
       <div className="header flex justify-between ">
         <h3 className="text-textSecondary font-bold group-hover:text-white">
           {name}
@@ -26,7 +26,7 @@ const TwitterCard = ({ name, handle, comment, linkedin }: TwitterCardProps) => {
       </div>
 
       <div className="comment">
-        <p className="text-primary font-medium text-lg group-hover:text-white">
+        <p className="text-primary font-medium text-lg group-hover:text-white dark:text-white">
           {comment}
         </p>
       </div>

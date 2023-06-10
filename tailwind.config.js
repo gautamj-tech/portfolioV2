@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+const colors = require('tailwindcss/colors')
+
+module.exports = withMT({
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -13,10 +16,13 @@ module.exports = {
 
     extend:{
       colors:{
+        
         primary: '#1E1E1E',
         secondary: '#F7F7F9',
         textPrimary:"#747474",
         textSecondary:"#949494",
+        darkBg : colors.zinc[900]
+        
       },
       backgroundImage: {
         'hero': "url('../public/hero.png')",
@@ -36,4 +42,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+})

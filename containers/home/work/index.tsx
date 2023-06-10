@@ -80,18 +80,16 @@ const Work = () => {
             },
           }}
         >
-          {projectsData.map((project: any) => (
-            <>
-              <SwiperSlide>
-                <ProjectCard
-                  image={project.img}
-                  title={project.name}
-                  description={project.desc}
-                  link={project.web}
-                  github={project.github}
-                />
-              </SwiperSlide>
-            </>
+          {projectsData.map((project: any, index: number) => (
+            <SwiperSlide key={index}>
+              <ProjectCard
+                image={project.img}
+                title={project.name}
+                description={project.desc}
+                link={project.web}
+                github={project.github}
+              />
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>
