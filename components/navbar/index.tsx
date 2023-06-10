@@ -14,12 +14,20 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import { CiDark } from "react-icons/ci";
 import { MdLightMode } from "react-icons/md";
+// import component 👇
+import Drawer from "react-modern-drawer";
 
+//import styles 👇
+import "react-modern-drawer/dist/index.css";
 import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState);
+  };
 
   return (
     <nav className="px-5 w-full py-2 mt-5 flex flex-row justify-between items-center sticky top-5 z-50 bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 rounded-3xl ">
@@ -85,7 +93,24 @@ const Navbar = () => {
         )}
 
         <div className="hamburger block md:hidden">
-          <GiHamburgerMenu className="text-textPrimary text-2xl cursor-pointer" />
+          <GiHamburgerMenu
+            className="text-textPrimary text-2xl cursor-pointer"
+            onClick={toggleDrawer}
+          />
+
+          <Drawer
+            open={isOpen}
+            onClose={toggleDrawer}
+            direction="right"
+            style={
+              currentTheme === "dark"
+                ? { backgroundColor: "black" }
+                : { backgroundColor: "white" }
+            }
+            className="drawer"
+          >
+            <div>Hello World</div>
+          </Drawer>
         </div>
       </div>
     </nav>
