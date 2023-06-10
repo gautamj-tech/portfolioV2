@@ -7,7 +7,7 @@ import ContentLoader from "react-content-loader";
 import Title from "@/components/Title";
 
 const Guestbook = () => {
-  const { data: session } = useSession<any>();
+  const { data: session }: any = useSession<any>();
   const [loading, setLoading] = useState<boolean>(false);
   const [message, setMessage] = useState<any>("");
   const [userMsg, setUserMsg] = useState<any>([]);

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import Marquee from "react-fast-marquee";
 import MyImg from "@/assets/images/my.jpg";
 import CampNou from "@/assets/images/camp_nou.jpg";
 import Barca from "@/assets/images/barca.gif";
 import { BsSpotify, BsArrowUpRightCircle } from "react-icons/bs";
 import getNowPlayingItem from "@/utils/spotify";
 
-const Hero = (props: any) => {
+const Hero = (props: any): any => {
   const [loading, setLoading] = useState<any>(true);
   const [result, setResult] = useState<any>({});
 
@@ -70,12 +70,12 @@ const Hero = (props: any) => {
               <BsSpotify className="text-white text-2xl" />
             )}
           </div>
-          <marquee>
+          <Marquee>
             <p className="text-white font-bold">
               {result?.isPlaying ? result.title : "Not Listening"} -{" "}
               {result?.isPlaying ? result.artist : "Spotify"}
             </p>
-          </marquee>
+          </Marquee>
         </div>
       </div>
       <div className="col-span-3 bg-secondary rounded-2xl p-8 flex flex-col row-span-3 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg">
