@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import myImg from "@/assets/images/myImg.png";
 import { motion } from "framer-motion";
+import { BsStackOverflow } from "react-icons/bs";
+import Link from "next/link";
 
 const AboutHero = () => {
   return (
@@ -48,9 +50,18 @@ const AboutHero = () => {
           src={myImg}
           alt="my"
           fill
-          className=" object-cover rounded-xl"
+          className="object-cover rounded-xl "
           placeholder="blur"
         />
+
+        <div className="ico absolute bottom-2 right-5  bg-gray-900 p-3 rounded-xl text-white cursor-pointer">
+          <Link
+            href="https://stackoverflow.com/users/9825931/bawantha-rathnayaka"
+            target="_blank"
+          >
+            <BsStackOverflow />
+          </Link>
+        </div>
       </motion.div>
     </div>
   );
