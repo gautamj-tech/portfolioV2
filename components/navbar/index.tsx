@@ -72,11 +72,27 @@ const Navbar = () => {
       </div>
 
       <div className="social-links  gap-5 hidden sm:hidden md:flex">
-        <FaFacebookF className="text-textPrimary text-md" />
-        <FaTwitter className="text-textPrimary text-md" />
-        <FaInstagram className="text-textPrimary text-md" />
-        <FaGithub className="text-textPrimary text-md" />
-        <FaLinkedinIn className="text-textPrimary text-md" />
+        <Link href="https://facebook.com/bawanthathilan/" target="_blank">
+          <FaFacebookF className="text-textPrimary text-md" />
+        </Link>
+
+        <Link href="https://twitter.com/ThilanBawantha" target="_blank">
+          <FaTwitter className="text-textPrimary text-md" />
+        </Link>
+
+        <Link href="https://www.instagram.com/bawwa_/" target="_blank">
+          <FaInstagram className="text-textPrimary text-md" />
+        </Link>
+
+        <Link href="https://github.com/Bawanthathilan" target="_blank">
+          <FaGithub className="text-textPrimary text-md" />
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/bawanthathilan/"
+          target="_blank"
+        >
+          <FaLinkedinIn className="text-textPrimary text-md" />
+        </Link>
       </div>
 
       <div className="theme-switcher flex gap-5">
