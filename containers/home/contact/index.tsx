@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "@/components/Title";
+import { useTheme } from "next-themes";
 
 const Contact = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
   return (
     <section id="contact">
       <Title title="Contact" />
@@ -31,35 +34,35 @@ const Contact = () => {
           <g clipPath="url(#clip0_3_58)">
             <path
               d="M71.62 124.33L121.54 198.5C122.54 200.06 123.79 201.73 125.6 202.24C127.88 202.89 130.18 201.48 132.13 200.14L251.13 118.07C253.68 116.31 256.46 114.2 256.9 111.13C257.36 107.84 254.9 104.91 252.69 102.47L198 43.26"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M68.83 125.47L127.73 91.3501C153.24 76.5701 179.23 61.4101 198.78 39.3501"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M71.45 128.77C103.3 131.55 135.37 134.32 167.19 131.22C172.19 130.73 177.29 130.05 181.6 127.52C190.08 122.52 193.16 111.94 195.09 102.3C198.801 83.8231 200.998 65.0742 201.66 46.24"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M103.31 146.85L121.42 177.46"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M191.39 67.8L185.8 101"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -70,45 +73,45 @@ const Contact = () => {
             />
             <path
               d="M277.44 58.2099C267.44 55.2999 260.81 43.9199 263.16 33.7899C264.16 29.3699 267.75 24.7899 272.25 25.3599C276.32 25.8699 278.64 30.1499 280.3 33.8999C282.796 30.7158 285.76 27.9276 289.09 25.6299C290.61 24.6299 292.38 23.6299 294.18 23.9499C296.18 24.3099 297.62 26.2799 297.97 28.2999C298.183 30.331 297.926 32.3838 297.22 34.2999C294.11 44.6899 287.77 55.1099 277.51 58.6299"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M255 16.4C251.8 17.75 248.45 19.04 245 18.92C241.55 18.8 237.89 16.92 236.73 13.67C236.263 12.2547 236.273 10.7252 236.759 9.31626C237.245 7.90731 238.18 6.69667 239.42 5.87002C240.699 5.10486 242.194 4.7805 243.675 4.94668C245.156 5.11287 246.542 5.76043 247.62 6.79002C247.941 5.13781 248.662 3.5894 249.72 2.28002C250.87 1.06002 252.91 0.510024 254.24 1.53002C255.57 2.55002 255.6 4.10002 255.61 5.53002C255.649 9.78369 255.043 14.0187 253.81 18.09"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M294 26.6499C293.26 26.7024 292.539 26.9071 291.881 27.2513C291.224 27.5954 290.645 28.0716 290.18 28.6499"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M265.69 34.6201C265.041 39.0698 266.029 43.6037 268.47 47.3801"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M240 9.33008C239.721 9.98791 239.595 10.7003 239.631 11.4139C239.667 12.1274 239.864 12.8236 240.208 13.45C240.551 14.0765 241.032 14.617 241.615 15.0309C242.197 15.4448 242.865 15.7215 243.57 15.8401"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M196.85 108.054C199.402 111.422 200.579 115.549 202.939 119.09"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M201.798 105.39C203.66 107.998 204.271 111.193 205.984 113.762"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
@@ -120,67 +123,67 @@ const Contact = () => {
             />
             <path
               d="M206.365 109.956C208.432 109.513 209.554 109.058 210.508 107.081C210.699 106.686 211.493 104.303 210.551 104.248C208.134 104.106 207.126 106.207 207.126 108.434C207.126 109.911 206.547 111.859 208.479 111.859C211.162 111.859 212.454 111.144 212.454 108.434"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M210.17 97.3979C211.905 99.7569 213.381 101.93 214.145 104.777C214.497 106.088 214.803 107.277 215.498 108.434"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M212.453 95.1145C215.95 97.8914 218.234 103.774 219.304 108.054"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M220.826 97.3979C219.362 99.4724 218.209 106.658 222.433 106.151C223.851 105.981 223.87 100.93 223.87 99.7659C223.87 97.8961 223.742 97.461 221.968 97.0173"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M191.142 130.126C192.288 132.465 193.117 134.843 193.975 137.294C194.496 138.783 194.14 136.654 193.996 136.194C193.155 133.501 193.425 130.631 193.425 127.843"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M194.948 125.179C197.464 125.651 198.753 126.282 198.753 128.837C198.753 131.195 198.132 132.548 196.533 134.27C195.294 135.605 196.016 135.352 197.252 135.476C201.414 135.892 201.39 140.782 197.231 140.782"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M204.842 129.746C203.254 131.434 201.798 134.383 201.798 136.765C201.798 138.852 204.309 137.215 204.673 135.962C204.878 135.256 204.674 130.888 205.794 130.888C206.93 130.888 207.606 132.41 209.028 132.41"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M208.267 128.224C209.8 128.493 210.939 128.859 212.2 129.746C212.58 130.013 213.188 131.058 213.405 130.232C213.617 129.426 213.047 125.793 214.187 126.934C217.877 130.624 217.02 125.097 217.02 122.515"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M219.684 121.374C222.363 122.121 223.008 124.489 225.202 125.708C226.061 126.185 225.295 122.008 226.344 121.775C227.401 121.54 229.103 123.01 229.198 120.908C229.272 119.294 229.198 117.663 229.198 116.046"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M235.287 112.621C234.697 113.23 230.162 119.797 232.623 120.232C234.157 120.502 235.914 120.313 236.64 118.794C237.56 116.872 237.9 114.803 237.951 112.705C237.985 111.31 238.827 113.141 239.114 113.572C240.152 115.128 243.005 113.692 244.04 113.001"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M197.612 115.284C199.418 114.475 201.828 113.316 203.109 111.669C203.686 110.927 204.523 111.296 204.842 110.337"
-              stroke="#1E1E1E"
+              stroke={currentTheme === "dark" ? "white" : "#1E1E1E"}
               strokeWidth="2"
               strokeLinecap="round"
             />
