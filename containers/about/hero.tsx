@@ -5,7 +5,7 @@ import myImg from "@/assets/images/myImg.png";
 const AboutHero = () => {
   return (
     <div className="grid  grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-10 ">
-      <div className="title bg-secondary p-5 rounded-xl relative dark:bg-darkBg col-span-3">
+      <div className="title bg-secondary p-5 rounded-xl relative dark:bg-darkBg col-span-3 flex flex-col gap-5">
         <h1 className=" text-6xl sm:text-6xl lg:text-[10vh] font-bold text-primary dark:text-white">
           I'm a{" "}
           <span className="titleFont font-medium">
