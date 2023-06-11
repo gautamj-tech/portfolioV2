@@ -52,11 +52,11 @@ const Hero = (props: any): any => {
 
         <hr />
 
-        <div className="spotify flex gap-5 items-center">
-          <div className="logo">
+        <div className="spotify flex gap-5 items-center flex-row flex-wrap">
+          {/* <div className="logo">
             <BsSpotify className="text-[#1DB954] text-5xl" />
           </div>
-          <h3 className="text-[#1DB954] font-bold text-2xl">Spotify</h3>
+          <h3 className="text-[#1DB954] font-bold text-2xl">Spotify</h3> */}
         </div>
 
         <div className="spotify_widget bg-[#1DB954] px-5 py-3 rounded-2xl flex items-center gap-5">
