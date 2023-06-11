@@ -1,6 +1,6 @@
 import React from "react";
 import Marqueee from "react-fast-marquee";
-import { comments } from "@/data/comments";
+import { comments } from "@/data";
 import TwitterCard from "../twitterCard";
 import { useTheme } from "next-themes";
 

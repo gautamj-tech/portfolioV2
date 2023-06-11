@@ -16,7 +16,7 @@ import { CiDark } from "react-icons/ci";
 import { MdLightMode } from "react-icons/md";
 // import component 👇
 import Drawer from "react-modern-drawer";
-
+import { menuData } from "@/data/index";
 //import styles 👇
 import "react-modern-drawer/dist/index.css";
 import { useTheme } from "next-themes";
@@ -42,26 +42,11 @@ const Navbar = () => {
       </Link>
       <div className="nav-links bg-white py-3 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block dark:bg-darkBg dark:border-gray-800">
         <ul className="flex gap-5 text-textPrimary text-md cursor-pointer px-5 ">
-          <Link href="/">
-            <li>Home</li>
-          </Link>
-
-          <Link href="#work">
-            <li> Work </li>
-          </Link>
-
-          <Link href="/about">
-            <li> About </li>
-          </Link>
-          <Link href="/guestbook">
-            <li> Guestbook </li>
-          </Link>
-          <Link href="https://blog.bawantha.me" target="_blank">
-            <li>Blog</li>
-          </Link>
-          <Link href="#contact">
-            <li>Contact</li>
-          </Link>
+          {menuData.map((item: any, index: number) => (
+            <Link href={item.link} key={index}>
+              <li>{item.name}</li>
+            </Link>
+          ))}
         </ul>
       </div>
 
@@ -135,26 +120,11 @@ const Navbar = () => {
                   )}
                 </div>
               </Link>
-              <Link href="/">
-                <li>Home</li>
-              </Link>
-
-              <Link href="#work">
-                <li> Work </li>
-              </Link>
-
-              <Link href="/about">
-                <li> About </li>
-              </Link>
-              <Link href="/guestbook">
-                <li> Guestbook </li>
-              </Link>
-              <Link href="https://blog.bawantha.me">
-                <li>Blog</li>
-              </Link>
-              <Link href="#contact">
-                <li>Contact</li>
-              </Link>
+              {menuData.map((item: any, index: number) => (
+                <Link href={item.link} key={index}>
+                  <li>{item.name}</li>
+                </Link>
+              ))}
             </ul>
           </Drawer>
         </div>

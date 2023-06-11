@@ -56,3 +56,27 @@ export const comments = [
         "Love the design and the clean look. Also, fun to see your Spotify account linked in it 😋",
     },
   ];
+
+
+  export const menuData =[
+    {
+      name: " / Home",
+      link: "/",
+    },
+    {
+      name: "Work",
+      link: "/#work",
+    },{
+      name: "About",
+      link: "/about",
+    },{
+      name: "Guestbook",
+      link: "/guestbook",
+    },{
+      name: "Blog",
+      link: "https://blog.bawantha.me/",
+    },{
+      name: "Contact",
+      link: "/contact",
+    }
+  ]
