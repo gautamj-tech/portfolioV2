@@ -23,7 +23,13 @@ const AboutHero = () => {
       </div>
 
       <div className="img w-full h-full relative col-span-2 rounded-xl">
-        <Image src={myImg} alt="my" fill className=" object-cover rounded-xl" />
+        <Image
+          src={myImg}
+          alt="my"
+          fill
+          className=" object-cover rounded-xl"
+          placeholder="blur"
+        />
       </div>
     </div>
   );
