@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import MyImg from "@/assets/images/my.png";
-import CampNou from "@/assets/images/camp_nou.jpg";
 import Barca from "@/assets/images/barca.gif";
-import { BsSpotify, BsArrowUpRightCircle } from "react-icons/bs";
+import { BsSpotify } from "react-icons/bs";
 import getNowPlayingItem from "@/utils/spotify";
+import { motion } from "framer-motion";
 
 const Hero = (props: any): any => {
   const [loading, setLoading] = useState<any>(true);
@@ -27,7 +26,7 @@ const Hero = (props: any): any => {
 
   return (
     <div className="mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 grid-rows-4  gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
-      <div className=" group col-span-2 bg-secondary rounded-2xl p-8 flex flex-col gap-5 row-span-4 cursor-pointer dark:bg-darkBg">
+      <motion.div className=" group col-span-2 bg-secondary rounded-2xl p-8 flex flex-col gap-5 row-span-4 cursor-pointer dark:bg-darkBg">
         <div className="image relative h-[450px] w-full">
           <Image
             src={MyImg}
@@ -78,7 +77,7 @@ const Hero = (props: any): any => {
             </p>
           </Marquee>
         </div>
-      </div>
+      </motion.div>
       <div className="col-span-3 bg-secondary rounded-2xl p-8 flex flex-col row-span-3 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg">
         <div className="content flex flex-col gap-5 ">
           <p className="text-primary font-bold text-5xl dark:text-white ">
