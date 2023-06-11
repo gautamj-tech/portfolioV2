@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import MyImg from "@/assets/images/my.jpg";
+import MyImg from "@/assets/images/my.png";
 import CampNou from "@/assets/images/camp_nou.jpg";
 import Barca from "@/assets/images/barca.gif";
 import { BsSpotify, BsArrowUpRightCircle } from "react-icons/bs";
