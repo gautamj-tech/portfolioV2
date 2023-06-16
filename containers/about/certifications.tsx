@@ -8,7 +8,7 @@ import CNCF from "@/assets/images/cncf.png";
 const Certifications = () => {
   return (
     <div className="mt-20">
-      <Title title="Certifications" />
+      <Title title="Certifications / Badges" />
 
       <div className="card_container grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
         <Link

@@ -18,12 +18,9 @@ const AboutHero = () => {
           transition={{ duration: 1.5, delay: 0.4 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className=" text-6xl sm:text-6xl lg:text-[10vh] font-bold text-primary dark:text-white"
+          className=" text-6xl sm:text-6xl lg:text-[7vh] font-bold text-primary dark:text-white"
         >
-          I'm a{" "}
-          <span className="titleFont font-medium">
-            Software Engineer working remotely from Sri Lanka.
-          </span>
+          <span className="titleFont font-sm">Get to know me!</span>
         </motion.div>
 
         <motion.div
@@ -32,9 +29,14 @@ const AboutHero = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-lg text-left text-textPrimary "
         >
-          I enjoy building dynamic, creative products from start to finish.
-          Focused on developing intuitive experiences that constantly grow and
-          improve based on user metrics. Always shipping.
+          Hi, my name is Bawantha and I am a Software Engineer based in Sri
+          Lanka. <br /> <br />I graduated from Sri Lanka Institute of
+          Information Technology, in 2022 with a BSc in Information Technology
+          and have been working in the field ever since. <br />
+          <br />
+          On my free time I like to read, play sports, travel, to make YouTube
+          videos. I am always seeking new experiences and love to keep myself
+          engaged and learning new things.
         </motion.div>
 
         <div className=" bg-green-500 h-5 w-5 rounded-md absolute right-2 bottom-2" />
