@@ -41,10 +41,10 @@ const Navbar = () => {
         </div>
       </Link>
       <div className="nav-links bg-white py-3 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block dark:bg-darkBg dark:border-gray-800">
-        <ul className="flex gap-5 text-textPrimary text-md cursor-pointer px-5 font-medium ">
+        <ul className="flex gap-5 text-textPrimary text-md cursor-pointer px-5 ">
           {menuData.map((item: any, index: number) => (
             <Link href={item.link} key={index}>
-              <li>{item.name}</li>
+              <li className=" font-medium">{item.name}</li>
             </Link>
           ))}
         </ul>

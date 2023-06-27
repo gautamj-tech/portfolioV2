@@ -135,7 +135,7 @@ const Hero = (props: any): any => {
         <div className=" absolute top-0 flex flex-row gap-5 justify-between h-full items-center">
           <h1 className="text-5xl font-bold text-white ">
             True Culer . |{" "}
-            <span className=" font-light line-through text-4xl">
+            <span className=" font-light line-through text-3xl">
               Visca Barca Visca Catalunya
             </span>
           </h1>
