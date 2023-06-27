@@ -10,8 +10,8 @@ const About = () => {
     <div className="mt-10">
       <AboutHero />
       <Experience />
-      <Certifications />
       <Acheivement />
+      <Certifications />
       <Slider />
     </div>
   );
