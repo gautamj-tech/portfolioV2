@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Logo from "@/assets/images/logo.png";
-import LogoLight from "@/assets/images/logo-light.png";
+import Logo from "@/assets/images/logo_2.png";
+import LogoLight from "@/assets/images/logo_2-light.png";
 import Link from "next/link";
 import {
   FaFacebookF,
