@@ -57,28 +57,37 @@ const Guestbook = () => {
 
   return (
     <div className=" h-[100vh] overflow-y-auto mt-10">
-      <div className="bg-secondary p-10 rounded-xl">
+      <div className="bg-secondary p-10 rounded-xl dark:bg-darkBg">
         <Title title="GuestBook" />
       </div>
 
       <div className="mt-10">
-        {session ? (
+        {!session ? (
           <>
-            <div>
-              <h4>sign in as </h4>
+            <div className="flex flex-col gap-5">
+              <h4 className="text-lg">sign in as</h4>
               <div>
-                <form onSubmit={createMessage}>
+                <form onSubmit={createMessage} className="flex flex-row gap-3">
                   <input
                     type="text"
                     value={userMsg}
                     onChange={handleInput}
-                    placeholder="Your Message "
+                    className="border-2 p-2 rounded-md w-full"
+                    placeholder="Enter Your Message"
                   />
-                  <button type="submit">Submit</button>
+                  <button
+                    type="submit"
+                    className=" bg-primary px-5 rounded-md text-white w-[250px]"
+                  >
+                    Submit
+                  </button>
                 </form>
               </div>
 
-              <button onClick={() => signOut()}>
+              <button
+                onClick={() => signOut()}
+                className="bg-primary text-white flex flex-row gap-3 items-center p-3 rounded-md w-[250px] justify-center"
+              >
                 <span>
                   <AiOutlineGithub size={20} />
                 </span>{" "}
@@ -102,10 +111,16 @@ const Guestbook = () => {
               )}
               {message &&
                 message.map((item: any, index: number) => (
-                  <div key={index}>
-                    <p style={{ color: "#525252" }}>{item.username} : </p>
+                  <div
+                    key={index}
+                    className="flex flex-row gap-5 bg-secondary p-5 rounded-xl justify-between mt-5"
+                  >
+                    <div className="left flex flex-row gap-5">
+                      <p style={{ color: "#525252" }}>{item.username} : </p>
+                      <p>{item.message}</p>
+                    </div>
 
-                    <p>{item.message}</p>
+                    <p style={{ color: "#525252" }}>{item.created_at}</p>
                   </div>
                 ))}
             </div>
