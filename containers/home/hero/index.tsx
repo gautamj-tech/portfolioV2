@@ -6,6 +6,7 @@ import Barca from "@/assets/images/barca.gif";
 import { BsSpotify } from "react-icons/bs";
 import getNowPlayingItem from "@/utils/spotify";
 import { motion } from "framer-motion";
+import { FiDownloadCloud } from "react-icons/fi";
 
 const Hero = (props: any): any => {
   const [loading, setLoading] = useState<any>(true);
@@ -104,10 +105,20 @@ const Hero = (props: any): any => {
 
           <hr />
 
-          <div className="buyMeCofee">
-            <a href="https://www.buymeacoffee.com/bawanthathilan">
-              <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=bawanthathilan&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" />
+          <div className="btn_group flex flex-row justify-between">
+            <a
+              href="https://drive.google.com/file/d/1gG4ECmLza1bP8AoafXs-U3otzY0rte0V/view?usp=sharing"
+              target="_blank"
+              className="cv bg-primary text-white font-medium flex items-center px-5 rounded-xl gap-4 dark:bg-secondary dark:text-primary"
+            >
+              <FiDownloadCloud />
+              Download CV
             </a>
+            <div className="buyMeCofee">
+              <a href="https://www.buymeacoffee.com/bawanthathilan">
+                <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=bawanthathilan&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" />
+              </a>
+            </div>
           </div>
         </div>
       </motion.div>
