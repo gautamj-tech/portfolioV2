@@ -105,11 +105,11 @@ const Hero = (props: any): any => {
 
           <hr />
 
-          <div className="btn_group flex flex-row justify-between">
+          <div className="btn_group flex flex-col md:flex-row lg:flex-row justify-between gap-4 md:gap-0">
             <a
               href="https://drive.google.com/file/d/1gG4ECmLza1bP8AoafXs-U3otzY0rte0V/view?usp=sharing"
               target="_blank"
-              className="cv bg-primary text-white font-medium flex items-center px-5 rounded-xl gap-4 dark:bg-secondary dark:text-primary"
+              className="cv bg-primary text-white font-medium flex items-center px-5 py-3 md:py-0 lg:py-0 rounded-xl gap-4 dark:bg-secondary dark:text-primary"
             >
               <FiDownloadCloud />
               Download CV
