@@ -94,7 +94,7 @@ const Guestbook = () => {
                 Sign out
               </button>
             </div>
-            <div>
+            <div className="mt-10 flex flex-col gap-3">
               {loading && (
                 <ContentLoader
                   speed={2}
@@ -139,7 +139,7 @@ const Guestbook = () => {
                 Sign in with Github
               </button>
             </div>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-col gap-3">
               {loading && (
                 <ContentLoader
                   speed={2}
