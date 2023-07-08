@@ -65,7 +65,7 @@ const Guestbook = () => {
         {session ? (
           <>
             <div className="flex flex-col gap-5">
-              <h4 className="text-lg">sign in as</h4>
+              <h4 className="text-lg">sign in as {session.user.name}</h4>
               <div>
                 <form onSubmit={createMessage} className="flex flex-row gap-3">
                   <input
