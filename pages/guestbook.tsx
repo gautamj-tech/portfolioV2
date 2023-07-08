@@ -117,7 +117,7 @@ const Guestbook = () => {
                   >
                     <div className="left flex flex-row gap-5">
                       <p style={{ color: "#525252" }}>{item.username} : </p>
-                      <p>{item.message}</p>
+                      <p style={{ color: "#525252" }}>{item.message}</p>
                     </div>
 
                     <p style={{ color: "#525252" }}>{item.created_at}</p>
@@ -162,7 +162,7 @@ const Guestbook = () => {
                   >
                     <div className="left flex flex-row gap-5">
                       <p style={{ color: "#525252" }}>{item.username} : </p>
-                      <p>{item.message}</p>
+                      <p style={{ color: "#525252" }}>{item.message}</p>
                     </div>
 
                     <p style={{ color: "#525252" }}>{item.created_at}</p>
