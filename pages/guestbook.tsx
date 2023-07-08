@@ -62,7 +62,7 @@ const Guestbook = () => {
       </div>
 
       <div className="mt-10">
-        {!session ? (
+        {session ? (
           <>
             <div className="flex flex-col gap-5">
               <h4 className="text-lg">sign in as</h4>
