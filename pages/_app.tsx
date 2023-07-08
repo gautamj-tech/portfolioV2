@@ -5,6 +5,7 @@ import Layout from "@/components/layout";
 import { ThemeProvider } from "next-themes";
 import { SessionProvider } from "next-auth/react";
 import LoadingScreen from "@/components/LoadingScreen";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps, session }: any) {
   const [loading, setLoading] = React.useState(false);
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps, session }: any) {
           <LoadingScreen />
         )}
       </ThemeProvider>
+      <Analytics />
     </>
   );
 }
