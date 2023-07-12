@@ -57,8 +57,13 @@ const Guestbook = () => {
 
   return (
     <div className=" h-[100vh] overflow-y-auto mt-10">
-      <div className="bg-secondary p-10 rounded-xl dark:bg-darkBg">
+      <div className="bg-secondary p-10 rounded-xl dark:bg-darkBg relative">
+        <span className="absolute w-[40%] -bottom-px right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+        <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
         <Title title="GuestBook" />
+        <p className="mt-2 text-textPrimary">
+          Write anything for future visitors of this website.🤩
+        </p>
       </div>
 
       <div className="mt-10">

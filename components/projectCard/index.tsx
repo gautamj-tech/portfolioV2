@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { GridPattern } from "../GridPattern";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 
@@ -15,6 +16,41 @@ interface ProjectCardProps {
   tech?: string[];
 }
 
+function Effect({ mouseX, mouseY, ...gridProps }: any) {
+  let maskImage = useMotionTemplate`radial-gradient(300px at ${mouseX}px ${mouseY}px, white, transparent)`;
+  let style = { maskImage, WebkitMaskImage: maskImage };
+
+  return (
+    <div className="pointer-events-none">
+      <div className="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50">
+        <GridPattern
+          width={72}
+          height={56}
+          x="50%"
+          className="absolute inset-x-0 inset-y-[-30%] h-[160%] w-full skew-y-[-18deg] fill-black/[0.02] stroke-black/5 dark:fill-white/1 dark:stroke-white/2.5"
+          {...gridProps}
+        />
+      </div>
+      <motion.div
+        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#D7EDEA] to-[#F4FBDF] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#202D2E] dark:to-[#303428]"
+        style={style}
+      />
+      <motion.div
+        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay transition duration-300 group-hover:opacity-100"
+        style={style}
+      >
+        <GridPattern
+          width={72}
+          height={56}
+          x="50%"
+          className="absolute inset-x-0 inset-y-[-30%] h-[160%] w-full skew-y-[-18deg] fill-black/50 stroke-black/70 dark:fill-white/2.5 dark:stroke-white/10"
+          {...gridProps}
+        />
+      </motion.div>
+    </div>
+  );
+}
+
 const ProjectCard = ({
   title,
   description,
@@ -24,9 +60,34 @@ const ProjectCard = ({
   category,
   tech,
 }: ProjectCardProps) => {
+  let mouseX = useMotionValue(0);
+  let mouseY = useMotionValue(0);
+
+  function onMouseMove({ currentTarget, clientX, clientY }: any) {
+    let { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
+
+  const data = {
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  };
+
   return (
-    <div className=" group bg-secondary rounded-2xl h-[500px]  max-h-[500px] p-10 flex flex-col gap-5 dark:bg-darkBg">
-      <div className="header flex flex-row justify-between gap-5">
+    <div
+      onMouseMove={onMouseMove}
+      className=" group cursor-pointer bg-secondary rounded-2xl h-[500px] max-h-[500px] p-10 flex flex-col gap-5 dark:bg-darkBg relative"
+    >
+      <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+      <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+      <Effect {...data.pattern} mouseX={mouseX} mouseY={mouseY} />
+      <div className="header flex flex-row justify-between gap-5 z-10">
         <div className="title flex flex-col gap-3">
           <h1 className="text-3xl font-bold text-primary dark:text-white">
             {title}
