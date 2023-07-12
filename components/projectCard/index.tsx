@@ -65,7 +65,7 @@ const ProjectCard = ({
   return (
     <div
       onMouseMove={onMouseMove}
-      className=" group cursor-pointer bg-secondary rounded-2xl h-[500px] max-h-[500px] p-10 flex flex-col gap-5 dark:bg-darkBg relative"
+      className=" group cursor-pointer border border-grey-200 dark:border-[#27272a] bg-secondary rounded-2xl h-[500px] max-h-[500px] p-10 flex flex-col gap-5 dark:bg-darkBg relative"
     >
       <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
       <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
