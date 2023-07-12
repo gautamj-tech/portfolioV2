@@ -95,7 +95,7 @@ const Navbar = () => {
 
         <div className="hamburger block md:hidden">
           <GiHamburgerMenu
-            className="text-textPrimary text-2xl cursor-pointer"
+            className="text-textPrimary dark:text-white text-2xl cursor-pointer"
             onClick={toggleDrawer}
           />
 
