@@ -40,11 +40,11 @@ const Navbar = () => {
           )}
         </div>
       </Link>
-      <div className="nav-links bg-white py-3 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block dark:bg-darkBg dark:border-gray-800">
-        <ul className="flex gap-5 text-textPrimary text-md cursor-pointer px-5 ">
+      <div className="nav-links bg-white py-3 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block dark:bg-darkBg dark:border-gray-800 shadow-lg">
+        <ul className="flex gap-5 text-textPrimary dark:text-white text-md cursor-pointer px-5 ">
           {menuData.map((item: any, index: number) => (
             <Link href={item.link} key={index}>
-              <li className=" font-medium">{item.name}</li>
+              <li className="font-normal">{item.name}</li>
             </Link>
           ))}
         </ul>
@@ -56,39 +56,39 @@ const Navbar = () => {
         </h3>
       </div>
 
-      <div className="social-links  gap-5 hidden sm:hidden md:flex">
+      <div className="social-links  gap-5 hidden sm:hidden md:flex ">
         <Link href="https://facebook.com/bawanthathilan/" target="_blank">
-          <FaFacebookF className="text-textPrimary text-md" />
+          <FaFacebookF className="text-textPrimary dark:text-white text-md" />
         </Link>
 
         <Link href="https://twitter.com/ThilanBawantha" target="_blank">
-          <FaTwitter className="text-textPrimary text-md" />
+          <FaTwitter className="text-textPrimary dark:text-white text-md" />
         </Link>
 
         <Link href="https://www.instagram.com/bawwa_/" target="_blank">
-          <FaInstagram className="text-textPrimary text-md" />
+          <FaInstagram className="text-textPrimary dark:text-white text-md" />
         </Link>
 
         <Link href="https://github.com/Bawanthathilan" target="_blank">
-          <FaGithub className="text-textPrimary text-md" />
+          <FaGithub className="text-textPrimary dark:text-white text-md" />
         </Link>
         <Link
           href="https://www.linkedin.com/in/bawanthathilan/"
           target="_blank"
         >
-          <FaLinkedinIn className="text-textPrimary text-md" />
+          <FaLinkedinIn className="text-textPrimary dark:text-white text-md" />
         </Link>
       </div>
 
       <div className="theme-switcher flex gap-5">
         {currentTheme === "dark" ? (
           <MdLightMode
-            className="text-textPrimary text-2xl cursor-pointer"
+            className="text-textPrimary text-2xl cursor-pointer dark:text-white"
             onClick={() => setTheme("light")}
           />
         ) : (
           <CiDark
-            className="text-textPrimary text-2xl cursor-pointer"
+            className="text-textPrimary text-2xl cursor-pointer dark:text-white"
             onClick={() => setTheme("dark")}
           />
         )}

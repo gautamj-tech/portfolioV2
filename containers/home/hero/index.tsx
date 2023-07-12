@@ -31,8 +31,10 @@ const Hero = (props: any): any => {
         transition={{ delay: 0.2 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className=" group col-span-2 bg-secondary rounded-2xl p-8 flex flex-col gap-5 row-span-4 cursor-pointer dark:bg-darkBg"
+        className=" group col-span-2 bg-secondary rounded-2xl p-8 flex flex-col gap-5 row-span-4 cursor-pointer dark:bg-darkBg relative"
       >
+        <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+        <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
         <div className="image relative h-[450px] w-full">
           <Image
             src={MyImg}
@@ -93,8 +95,10 @@ const Hero = (props: any): any => {
         transition={{ delay: 0.3 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="col-span-3 bg-secondary rounded-2xl p-8 flex flex-col row-span-3 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg"
+        className="col-span-3 bg-secondary rounded-2xl p-8 flex flex-col row-span-3 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative"
       >
+        <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+        <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
         <div className="content flex flex-col gap-5 ">
           <p className="text-primary font-bold text-5xl dark:text-white ">
             Software Engineer , Tech Blogger and {""}

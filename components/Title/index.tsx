@@ -11,7 +11,7 @@ const Title = ({ title }: TitleProps) => {
         {title}
       </h1>
       {/* line */}
-      <div className="w-full h-[0.5px] bg-textPrimary mt-2 ml-2"></div>
+      <div className="w-full h-[0.5px] bg-gray-200 dark:bg-gray-800  mt-2 ml-2"></div>
     </div>
   );
 };
