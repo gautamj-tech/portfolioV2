@@ -50,11 +50,11 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className=" block md:hidden">
+      {/* <div className=" block md:hidden">
         <h3 className="font-bold text-primary dark:text-white">
           Bawantha Thilan .
         </h3>
-      </div>
+      </div> */}
 
       <div className="social-links  gap-5 hidden sm:hidden md:flex ">
         <Link href="https://facebook.com/bawanthathilan/" target="_blank">
