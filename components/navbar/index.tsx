@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="px-0 md:px-5 w-full py-2 mt-5 flex flex-row justify-between items-center sticky top-0 z-50 bg-white dark:bg-[#121212] bg-opacity-60 ">
+    <nav className="px-5 w-full py-2 mt-5 flex flex-row justify-between items-center sticky top-0 z-50 bg-white dark:bg-[#121212] bg-opacity-60 ">
       <Link href="/">
         <div className="logo">
           {currentTheme === "dark" ? (
