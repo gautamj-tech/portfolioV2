@@ -26,12 +26,12 @@ const Hero = (props: any): any => {
   });
 
   return (
-    <div className="mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 grid-rows-4  gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
+    <div className="mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
       <motion.div
         transition={{ delay: 0.2 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className=" group border border-grey-200 dark:border-[#27272a] col-span-2 bg-secondary rounded-2xl p-8 flex flex-col gap-5 row-span-4 cursor-pointer dark:bg-darkBg relative"
+        className=" group border border-grey-200 dark:border-[#27272a] col-span-2 bg-secondary rounded-2xl p-8 flex flex-col gap-5 row-span-3 cursor-pointer dark:bg-darkBg relative"
       >
         <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
         <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
@@ -51,13 +51,13 @@ const Hero = (props: any): any => {
           animate={{ opacity: 1, y: 0 }}
           className="title mt-5"
         >
-          <h1 className="text-5xl ">
+          <h1 className="text-4xl ">
             <span className="font-medium text-textSecondary titleFont">
-              Hi, I'm
+              hey, I'm
             </span>{" "}
             <br />
             <span className="font-bold text-primary  titleFont dark:text-white">
-              Bawantha Thian
+              Bawantha Thian 👋
             </span>
           </h1>
         </motion.div>
@@ -95,12 +95,12 @@ const Hero = (props: any): any => {
         transition={{ delay: 0.3 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-2xl p-8 flex flex-col row-span-3 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative"
+        className="col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-2xl p-8 flex flex-col row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative"
       >
         <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
         <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-        <div className="content flex flex-col gap-5 ">
-          <p className="text-primary font-bold text-5xl dark:text-white ">
+        <div className="content flex flex-col gap-5  h-full justify-between ">
+          <p className="text-primary font-bold text-4xl dark:text-white ">
             Software Engineer , Tech Blogger and {""}
             <span className="text-textSecondary">Traveller</span>, opensource
             enthusiast, practicing minimalist, and Pop Music in search of flow.
