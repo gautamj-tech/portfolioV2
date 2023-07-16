@@ -13,7 +13,6 @@ const Slider = () => {
             src="https://res.cloudinary.com/sliit123/image/upload/v1689487693/IMG_1385_lkm7x0.jpg"
             alt="img"
             priority
-            sizes="(max-width: 768px) 213px, 33vw"
             fill
             className="object-cover rounded-lg"
           />
@@ -23,7 +22,6 @@ const Slider = () => {
             src="https://res.cloudinary.com/sliit123/image/upload/v1657634530/274008021_4972833612755971_1080696660064803007_n_r21r7c.jpg"
             alt="img"
             priority
-            sizes="(max-width: 768px) 213px, 33vw"
             fill
             className="object-cover rounded-lg"
           />
@@ -33,7 +31,6 @@ const Slider = () => {
             src="https://res.cloudinary.com/sliit123/image/upload/v1689487370/316658694_430294279302760_1659755422825450540_n_uvjvum.jpg"
             alt="img"
             priority
-            sizes="(max-width: 768px) 213px, 33vw"
             fill
             className="object-cover rounded-lg"
           />
@@ -43,7 +40,6 @@ const Slider = () => {
             src="https://res.cloudinary.com/sliit123/image/upload/v1657634536/78390585_2506948399550696_6980378636998148096_n_vdocpq.jpg"
             alt="img"
             priority
-            sizes="(max-width: 768px) 213px, 33vw"
             fill
             className="object-cover rounded-lg"
           />
@@ -53,7 +49,6 @@ const Slider = () => {
             src="https://res.cloudinary.com/sliit123/image/upload/v1657634607/70194955_2480635875505990_7830033192324169728_n_pngnmx.jpg"
             alt="img"
             priority
-            sizes="(max-width: 768px) 213px, 33vw"
             fill
             className="object-cover rounded-lg"
           />
@@ -63,7 +58,6 @@ const Slider = () => {
             src="https://res.cloudinary.com/sliit123/image/upload/v1657204392/269486241_4901193186586681_4737586760052715988_n_anphqo.jpg"
             alt="img"
             priority
-            sizes="(max-width: 768px) 213px, 33vw"
             fill
             className="object-cover rounded-lg"
           />
