@@ -131,7 +131,7 @@ const Hero = (props: any): any => {
         transition={{ delay: 0.4 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-secondary relative group cursor-pointer col-span-3  rounded-2xl p-8 flex flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[500px] sm:h-[500px] md:h-auto lg:h-auto"
+        className=" hidden md:flex bg-secondary relative group cursor-pointer col-span-3  rounded-2xl p-8  flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[500px] sm:h-[500px] md:h-auto lg:h-auto"
       >
         <Image
           src="https://res.cloudinary.com/sliit123/image/upload/v1689489558/c7c67a0c52b1b5575eda2f2666aa86cff4f955c2_wt4vfp.webp"
