@@ -9,8 +9,8 @@ const Contact = () => {
     <section id="contact">
       <Title title="Contact" />
 
-      <div className="contact_content bg-secondary p-10 mt-10 md:mt-20 mb-20 rounded-3xl flex flex-col gap-10 relative dark:bg-darkBg">
-        <h1 className="text-primary text-3xl sm:text-3xl md:text-5xl lg:text-8xl font-bold ">
+      <div className="contact_content mt-10 md:mt-20 mb-20 rounded-3xl flex flex-col gap-5 relative ">
+        <h1 className="text-primary text-3xl sm:text-3xl md:text-5xl lg:text-3xl font-bold ">
           <span className="text-textPrimary dark:text-white font-bold">
             Let's do something
           </span>{" "}
@@ -19,7 +19,7 @@ const Contact = () => {
 
         <div className="line h-[0.5px] w-1/2 bg-textSecondary hidden md:inline-block lg:inline-block"></div>
 
-        <h3 className="text-primary text-2xl sm:text-2xl lg:text-5xl font-bold dark:text-white">
+        <h3 className="text-primary text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white">
           hello@bawantha.me
         </h3>
 
@@ -29,7 +29,7 @@ const Contact = () => {
           viewBox="0 0 397 238"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute bottom-0 right-0 opacity-40 w-80 md:w-96"
+          className="absolute -bottom-5 right-0 opacity-40 w-80 hidden md:block md:w-[300px]"
         >
           <g clipPath="url(#clip0_3_58)">
             <path
