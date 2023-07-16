@@ -134,27 +134,21 @@ const Hero = (props: any): any => {
         className="bg-secondary relative group cursor-pointer col-span-3  rounded-2xl p-8 flex flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[500px] sm:h-[500px] md:h-auto lg:h-auto"
       >
         <Image
-          src={Barca}
+          src="https://res.cloudinary.com/sliit123/image/upload/v1689489558/c7c67a0c52b1b5575eda2f2666aa86cff4f955c2_wt4vfp.webp"
           alt="messi"
           fill
           unoptimized={true}
           className="object-cover rounded-2xl"
         />
 
-        <p>
-          <a href="https://giphy.com/gifs/fcbarcelona-futbol-fc-barcelona-camp-nou-12qVn0zVgCRjpK">
-            via GIPHY
-          </a>
-        </p>
-
-        <div className=" absolute top-0 flex flex-row gap-5 justify-between h-full items-center">
+        {/* <div className=" absolute top-0 flex flex-row gap-5 justify-between h-full items-center">
           <h1 className="text-5xl font-bold text-white ">
-            True Culer . |{" "}
+            True Culer. |{" "}
             <span className=" font-light line-through text-3xl">
               Visca Barca Visca Catalunya
             </span>
           </h1>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );
