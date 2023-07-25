@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className="mt-10">
       <AboutHero />
-      <Experience />
+      {/* <Experience /> */}
       <Acheivement />
       <Certifications />
       <Slider />
