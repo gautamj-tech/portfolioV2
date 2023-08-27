@@ -30,14 +30,21 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="px-5 w-full py-2 mt-5 flex flex-row justify-between items-center sticky top-0 z-50 bg-white dark:bg-[#121212] bg-opacity-60 ">
+    <nav className="px-0 w-full py-2 mt-5 flex flex-row justify-between items-center sticky top-0 z-50 bg-white dark:bg-[#121212] bg-opacity-60 ">
       <Link href="/">
         <div className="logo">
-          {currentTheme === "dark" ? (
+          {/* {currentTheme === "dark" ? (
             <Image src={LogoLight} alt="logo" className="w-5 md:w-6" />
           ) : (
             <Image src={Logo} alt="logo" className="w-5 md:w-6" />
-          )}
+          )} */}
+          <span
+            className={` ${
+              currentTheme === "dark" ? "text-white" : "text-textPrimary "
+            } text-3xl font-bold`}
+          >
+            B.
+          </span>
         </div>
       </Link>
       <div className="nav-links bg-white py-3 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block dark:bg-darkBg dark:border-gray-800 shadow-lg">
@@ -49,12 +56,6 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-
-      {/* <div className=" block md:hidden">
-        <h3 className="font-bold text-primary dark:text-white">
-          Bawantha Thilan .
-        </h3>
-      </div> */}
 
       <div className="social-links  gap-5 hidden sm:hidden md:flex ">
         <Link href="https://facebook.com/bawanthathilan/" target="_blank">
