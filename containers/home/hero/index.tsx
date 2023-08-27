@@ -7,6 +7,7 @@ import { BsSpotify } from "react-icons/bs";
 import getNowPlayingItem from "@/utils/spotify";
 import { motion } from "framer-motion";
 import { FiDownloadCloud } from "react-icons/fi";
+import { Meteors } from "@/components/Meteors";
 
 const Hero = (props: any): any => {
   const [loading, setLoading] = useState<any>(true);
@@ -26,7 +27,7 @@ const Hero = (props: any): any => {
   });
 
   return (
-    <div className="mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
+    <div className=" relative mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
       <motion.div
         transition={{ delay: 0.2 }}
         initial={{ opacity: 0, y: 20 }}
@@ -95,7 +96,7 @@ const Hero = (props: any): any => {
         transition={{ delay: 0.3 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-2xl p-8 flex flex-col row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative"
+        className="col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-2xl p-8 flex flex-col row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden"
       >
         <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
         <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
@@ -125,6 +126,8 @@ const Hero = (props: any): any => {
             </div>
           </div>
         </div>
+
+        <Meteors number={10} />
       </motion.div>
 
       <motion.div
