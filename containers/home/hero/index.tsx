@@ -27,7 +27,7 @@ const Hero = (props: any): any => {
   });
 
   return (
-    <div className=" relative mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
+    <div className=" relative mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
       <motion.div
         transition={{ delay: 0.2 }}
         initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ const Hero = (props: any): any => {
         transition={{ delay: 0.4 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className=" hidden md:flex bg-secondary relative group cursor-pointer col-span-3  rounded-2xl p-8  flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[500px] sm:h-[500px] md:h-auto lg:h-auto"
+        className=" hidden md:flex bg-secondary relative group cursor-pointer col-span-3  rounded-2xl p-8  flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[500px] sm:h-[500px] md:h-[400px] lg:h-auto"
       >
         <Image
           src="https://res.cloudinary.com/sliit123/image/upload/v1689489558/c7c67a0c52b1b5575eda2f2666aa86cff4f955c2_wt4vfp.webp"
@@ -143,15 +143,6 @@ const Hero = (props: any): any => {
           unoptimized={true}
           className="object-cover rounded-2xl"
         />
-
-        {/* <div className=" absolute top-0 flex flex-row gap-5 justify-between h-full items-center">
-          <h1 className="text-5xl font-bold text-white ">
-            True Culer. |{" "}
-            <span className=" font-light line-through text-3xl">
-              Visca Barca Visca Catalunya
-            </span>
-          </h1>
-        </div> */}
       </motion.div>
     </div>
   );
