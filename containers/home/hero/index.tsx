@@ -38,7 +38,7 @@ const Hero = (props: any): any => {
         <Badge text="Buy Next JS Portfolio Templates" url="https://www.buymeacoffee.com/bawanthathilan" />
       </div>
 
-      <div className=" relative mt-0 md:mt-0 lg:mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
+      <div className="relative mt-0 md:mt-0 lg:mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row ">
 
         <motion.div
           transition={{ delay: 0.2 }}
