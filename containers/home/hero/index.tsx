@@ -10,6 +10,13 @@ import { FiDownloadCloud } from "react-icons/fi";
 import { Meteors } from "@/components/Meteors";
 import { Badge } from "@/components/Badge";
 
+import { FaReact } from 'react-icons/fa'
+import { TbBrandNextjs, TbBrandFigma, TbBrandGithub, TbBrandJavascript, TbBrandDocker } from 'react-icons/tb'
+import { IoLogoNodejs } from 'react-icons/io'
+import { IconContainer } from "@/components/Radar/iconContainer";
+import { Radar } from "@/components/Radar";
+
+
 const Hero = (props: any): any => {
   const [loading, setLoading] = useState<any>(true);
   const [result, setResult] = useState<any>({});
@@ -141,15 +148,67 @@ const Hero = (props: any): any => {
           transition={{ delay: 0.4 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className=" hidden md:flex bg-secondary relative group cursor-pointer col-span-3  rounded-2xl p-8  flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[500px] sm:h-[500px] md:h-[400px] lg:h-auto"
+          className=" flex md:flex bg-secondary dark:bg-darkBg  relative group cursor-pointer col-span-3  rounded-2xl p-0  flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[300px] md:h-[300px]  lg:h-auto"
         >
-          <Image
-            src="https://res.cloudinary.com/sliit123/image/upload/v1689489558/c7c67a0c52b1b5575eda2f2666aa86cff4f955c2_wt4vfp.webp"
-            alt="messi"
-            fill
-            unoptimized={true}
-            className="object-cover rounded-2xl"
-          />
+          <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden px-4 ">
+            <div className="mx-auto w-full px-5">
+              <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+                <IconContainer
+                  delay={0.4}
+                  text="NEXT JS"
+                  icon={<TbBrandNextjs className=" h-8 w-8 text-[#475569]" />}
+                />
+                <IconContainer
+                  delay={0.4}
+                  text="React JS"
+                  icon={<FaReact className=" h-8 w-8 text-[#475569]" />}
+                />
+                <IconContainer
+                  text="Figma"
+                  delay={0.3}
+                  icon={<TbBrandFigma className=" h-8 w-8 text-[#475569]" />}
+                />
+              </div>
+            </div>
+            <div className="mx-auto w-full max-w-md">
+              <div className="flex w-full items-center justify-center space-x-10 md:justify-around md:space-x-0 ">
+                <IconContainer
+                  text="Git"
+                  delay={0.5}
+                  icon={<FaReact className=" h-8 w-8 text-[#475569]" />}
+                />
+                <IconContainer
+                  text="Java Script"
+                  icon={
+                    <TbBrandJavascript className=" h-8 w-8 text-[#475569]" />
+                  }
+                  delay={0.8}
+                />
+              </div>
+            </div>
+            <div className="mx-auto w-full max-w-3xl">
+              <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+                <IconContainer
+                  delay={0.6}
+                  text="GitHub"
+                  icon={<TbBrandGithub className=" h-8 w-8 text-[#475569]" />}
+                />
+                <IconContainer
+                  delay={0.7}
+                  text="Node JS"
+                  icon={<IoLogoNodejs className=" h-8 w-8 text-[#475569] " />}
+                />
+                <IconContainer
+                  delay={0.7}
+                  text="Docker"
+                  icon={<TbBrandDocker className=" h-8 w-8 text-[#475569] " />}
+                />
+              </div>
+            </div>
+
+            <Radar className="absolute -bottom-12" />
+            <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
+          </div>
         </motion.div>
       </div>
     </React.Fragment>

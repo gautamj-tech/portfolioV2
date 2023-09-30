@@ -1,37 +1,34 @@
 /** @type {import('tailwindcss').Config} */
 const withMT = require("@material-tailwind/react/utils/withMT");
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = withMT({
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/**/*.{js,ts,jsx,tsx,mdx}',
-    './containers/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/**/*.{js,ts,jsx,tsx,mdx}",
+    "./containers/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
-  darkMode:'class',
+  darkMode: "class",
   theme: {
-
-    extend:{
-      colors:{
-        
-        primary: '#1E1E1E',
-        secondary: '#F7F7F9',
-        textPrimary:"#747474",
-        textSecondary:"#949494",
-        darkBg : colors.zinc[900]
-        
+    extend: {
+      colors: {
+        primary: "#1E1E1E",
+        secondary: "#F7F7F9",
+        textPrimary: "#747474",
+        textSecondary: "#949494",
+        darkBg: colors.zinc[900],
       },
       backgroundImage: {
-        'hero': "url('../public/hero.png')",
+        hero: "url('../public/hero.png')",
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+        "radar-spin": "radar-spin 10s linear infinite",
       },
       keyframes: {
-
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
           "70%": { opacity: 1 },
@@ -40,19 +37,28 @@ module.exports = withMT({
             opacity: 0,
           },
         },
+
+        "radar-spin": {
+          from: {
+            transform: "rotate(20deg)",
+          },
+          to: {
+            transform: "rotate(380deg)",
+          },
+        },
       },
     },
 
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
       },
     },
   },
   plugins: [],
-})
+});
