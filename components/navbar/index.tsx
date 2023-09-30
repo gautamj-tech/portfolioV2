@@ -10,12 +10,9 @@ import {
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
-
-import { CiDark } from "react-icons/ci";
+import { CiDark, CiMenuFries } from "react-icons/ci";
+import { AiOutlineClose } from 'react-icons/ai'
 import { MdLightMode } from "react-icons/md";
-// import component 👇
-import Drawer from "react-modern-drawer";
 import { menuData } from "@/data/index";
 //import styles 👇
 import "react-modern-drawer/dist/index.css";
@@ -27,12 +24,13 @@ const Navbar = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState("/");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
 
   return (
-    <nav className="px-0 w-full py-2 mt-5 flex flex-row justify-between items-center sticky top-0 z-50 bg-white dark:bg-[#121212] bg-opacity-60 ">
+    <nav className="px-5 md:px-0 lg:px-0 w-full py-2 mt-5 flex flex-row justify-between items-center sticky top-0 z-50 bg-white dark:bg-[#121212] bg-opacity-60 ">
       <Link href="/">
         <div className="logo">
           <span
@@ -43,7 +41,7 @@ const Navbar = () => {
           </span>
         </div>
       </Link>
-      <div className="nav-links bg-white py-3 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:block dark:bg-darkBg dark:border-gray-800 shadow-lg">
+      <div className="nav-links bg-white py-3 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:hidden lg:block dark:bg-darkBg dark:border-gray-800 shadow-lg">
         <ul className="flex gap-5 text-textPrimary dark:text-white text-md cursor-pointer px-5 ">
           {menuData.map((item: any, index: number) => {
             const isSelected = item.name === selectedLink;
@@ -116,43 +114,65 @@ const Navbar = () => {
           />
         )}
 
-        <div className="hamburger block md:hidden">
-          <GiHamburgerMenu
-            className="text-textPrimary dark:text-white text-2xl cursor-pointer"
-            onClick={toggleDrawer}
-          />
+        <div className="hamburger block md:block lg:hidden">
 
-          <Drawer
-            open={isOpen}
-            onClose={toggleDrawer}
-            direction="right"
-            style={
-              currentTheme === "dark"
-                ? { backgroundColor: "black" }
-                : { backgroundColor: "white" }
-            }
-            className="drawer"
+          {mobileMenuOpen ? <AiOutlineClose
+            className="text-textPrimary dark:text-white text-2xl cursor-pointer"
+            onClick={() => setMobileMenuOpen(false)}
+
+
+          /> : <CiMenuFries
+            className="text-textPrimary dark:text-white text-2xl cursor-pointer"
+            onClick={() => setMobileMenuOpen(true)}
+
+          />}
+
+
+
+          {!mobileMenuOpen ? null : <motion.div
+            animate={{ y: 10, opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 0.2 }}
+            className={`absolute top-12 right-0 px-10 py-5 rounded-md ${currentTheme === 'dark' ? 'bg-black border border-gray-500' : 'bg-white border border-gray-600'}`}
           >
-            <ul className="flex flex-col gap-5 text-textPrimary text-lg cursor-pointer px-5 mt-10 ">
-              <Link href="/">
-                <div className="logo">
-                  {currentTheme === "dark" ? (
-                    <Image src={LogoLight} alt="logo" className="w-5 md:w-6" />
-                  ) : (
-                    <Image src={Logo} alt="logo" className="w-5 md:w-6" />
-                  )}
-                </div>
-              </Link>
-              {menuData.map((item: any, index: number) => (
-                <Link href={item.link} key={index}>
-                  <li>{item.name}</li>
-                </Link>
-              ))}
-            </ul>
-          </Drawer>
+            <motion.ul
+              animate={{ y: 0, opacity: 1 }}
+              className={`flex flex-col gap-5 ${currentTheme === "dark" ? "text-white" : "text-textPrimary "} text-lg cursor-pointer px-0 mt-0`}>
+              {menuData.map((item: any, index: number) => {
+                const isSelected = item.name === selectedLink;
+                return (<Link href={item.link} key={index} onClick={() => setSelectedLink(item.name)} className=" relative">
+                  <li className="font-normal">{item.name}
+                    {isSelected ? (
+                      <motion.div className="absolute -bottom-[1px] left-0 right-0 h-[1px]">
+                        <svg width="37" height="8" viewBox="0 0 37 8" fill="none">
+                          <motion.path
+                            d="M1 5.39971C7.48565 -1.08593 6.44837 -0.12827 8.33643 6.47992C8.34809 6.52075 11.6019 2.72875 12.3422 2.33912C13.8991 1.5197 16.6594 2.96924 18.3734 2.96924C21.665 2.96924 23.1972 1.69759 26.745 2.78921C29.7551 3.71539 32.6954 3.7794 35.8368 3.7794"
+                            stroke="#7043EC"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            initial={{
+                              strokeDasharray: 84.20591735839844,
+                              strokeDashoffset: 84.20591735839844,
+                            }}
+                            animate={{
+                              strokeDashoffset: 0,
+                            }}
+                            transition={{
+                              duration: 1,
+                            }}
+                          />
+                        </svg>
+                      </motion.div>
+                    ) : null}
+                  </li>
+                </Link>)
+              })}
+            </motion.ul>
+          </motion.div>}
+
         </div>
       </div>
-    </nav>
+    </nav >
   );
 };
 
