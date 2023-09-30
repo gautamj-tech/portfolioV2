@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import MyImg from "@/assets/images/my.png";
-import Barca from "@/assets/images/barca.gif";
 import { BsSpotify } from "react-icons/bs";
 import getNowPlayingItem from "@/utils/spotify";
 import { motion } from "framer-motion";
 import { FiDownloadCloud } from "react-icons/fi";
 import { Meteors } from "@/components/Meteors";
 import { Badge } from "@/components/Badge";
-
 import { FaReact } from 'react-icons/fa'
 import { TbBrandNextjs, TbBrandFigma, TbBrandGithub, TbBrandJavascript, TbBrandDocker } from 'react-icons/tb'
 import { IoLogoNodejs } from 'react-icons/io'
@@ -150,23 +148,29 @@ const Hero = (props: any): any => {
           animate={{ opacity: 1, y: 0 }}
           className=" flex md:flex bg-secondary dark:bg-darkBg  relative group cursor-pointer col-span-3  rounded-2xl p-0  flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[300px] md:h-[300px]  lg:h-auto"
         >
+
+          <div className=" absolute w-full h-full ">
+
+
+          </div>
+
           <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden px-4 ">
             <div className="mx-auto w-full px-5">
               <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
                 <IconContainer
                   delay={0.4}
                   text="NEXT JS"
-                  icon={<TbBrandNextjs className=" h-8 w-8 text-[#475569]" />}
+                  icon={<TbBrandNextjs className=" h-8 w-8 text-textSecondary " />}
                 />
                 <IconContainer
                   delay={0.4}
                   text="React JS"
-                  icon={<FaReact className=" h-8 w-8 text-[#475569]" />}
+                  icon={<FaReact className=" h-8 w-8 text-textSecondary " />}
                 />
                 <IconContainer
                   text="Figma"
                   delay={0.3}
-                  icon={<TbBrandFigma className=" h-8 w-8 text-[#475569]" />}
+                  icon={<TbBrandFigma className=" h-8 w-8 text-textSecondary" />}
                 />
               </div>
             </div>
@@ -175,12 +179,12 @@ const Hero = (props: any): any => {
                 <IconContainer
                   text="Git"
                   delay={0.5}
-                  icon={<FaReact className=" h-8 w-8 text-[#475569]" />}
+                  icon={<FaReact className=" h-8 w-8 text-textSecondary" />}
                 />
                 <IconContainer
                   text="Java Script"
                   icon={
-                    <TbBrandJavascript className=" h-8 w-8 text-[#475569]" />
+                    <TbBrandJavascript className=" h-8 w-8 text-textSecondary" />
                   }
                   delay={0.8}
                 />
@@ -191,17 +195,17 @@ const Hero = (props: any): any => {
                 <IconContainer
                   delay={0.6}
                   text="GitHub"
-                  icon={<TbBrandGithub className=" h-8 w-8 text-[#475569]" />}
+                  icon={<TbBrandGithub className=" h-8 w-8 text-textSecondary" />}
                 />
                 <IconContainer
                   delay={0.7}
                   text="Node JS"
-                  icon={<IoLogoNodejs className=" h-8 w-8 text-[#475569] " />}
+                  icon={<IoLogoNodejs className=" h-8 w-8 text-textSecondary " />}
                 />
                 <IconContainer
                   delay={0.7}
                   text="Docker"
-                  icon={<TbBrandDocker className=" h-8 w-8 text-[#475569] " />}
+                  icon={<TbBrandDocker className=" h-8 w-8 text-textSecondary " />}
                 />
               </div>
             </div>
