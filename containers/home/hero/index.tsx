@@ -151,7 +151,7 @@ const Hero = (props: any): any => {
 
           <div className="rounded-2xl absolute w-full h-full bg-transparent z-50 hidden group-hover:flex">
             <div className="flex justify-center w-full h-full items-center z-50">
-              <h1 className="bg-secondary dark:bg-darkBg  py-2 rounded-md px-4">Tootls and Technologies I Used</h1>
+              <h1 className="bg-secondary dark:bg-darkBg  py-2 rounded-md px-4">Tools and Technologies I Used</h1>
             </div>
           </div>
 
