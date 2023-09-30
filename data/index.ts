@@ -66,7 +66,7 @@ export const comments = [
 
 export const menuData = [
   {
-    name: " / Home",
+    name: "Home",
     link: "/",
   },
   {
