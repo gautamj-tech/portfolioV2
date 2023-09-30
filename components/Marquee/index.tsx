@@ -17,7 +17,7 @@ const Marquee = () => {
         speed={40}
       >
         {comments.map((comment: any, index: any) => (
-          <div id={index} key={index}>
+          <div id={index} key={index} className="last-of-type:mr-5">
             <TwitterCard
               name={comment.name}
               comment={comment.comment}

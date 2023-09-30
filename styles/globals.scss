@@ -20,14 +20,6 @@ body {
 .marq {
   margin-top: 1rem;
   margin-bottom: 1rem;
-
-  div {
-    gap: 1rem;
-
-    &:nth-child(8) {
-      margin-right: 1rem;
-    }
-  }
 }
 
 $path-length: 1000.2890625px;
