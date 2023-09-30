@@ -146,15 +146,16 @@ const Hero = (props: any): any => {
           transition={{ delay: 0.4 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className=" flex md:flex bg-secondary dark:bg-darkBg  relative group cursor-pointer col-span-3  rounded-2xl p-0  flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[300px] md:h-[300px]  lg:h-auto"
+          className=" flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-3  rounded-2xl p-0  flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[300px] md:h-[300px]  lg:h-auto"
         >
 
-          <div className=" absolute w-full h-full ">
-
-
+          <div className="rounded-2xl absolute w-full h-full bg-transparent z-50 hidden group-hover:flex">
+            <div className="flex justify-center w-full h-full items-center z-50">
+              <h1 className="bg-secondary dark:bg-darkBg  py-2 rounded-md px-4">Tootls and Technologies I Used</h1>
+            </div>
           </div>
 
-          <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden px-4 ">
+          <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden px-4 z-10">
             <div className="mx-auto w-full px-5">
               <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
                 <IconContainer
