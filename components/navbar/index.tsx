@@ -23,7 +23,7 @@ const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState("/");
+  const [selectedLink, setSelectedLink] = useState("Home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
