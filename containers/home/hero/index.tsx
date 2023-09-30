@@ -53,7 +53,7 @@ const Hero = (props: any): any => {
               src={MyImg}
               alt="my"
               placeholder="blur"
-              className="rounded-2xl object-cover grayscale group-hover:grayscale-0  transition duration-500 ease-in-out "
+              className="rounded-2xl object-cover "
               fill
             />
           </div>
