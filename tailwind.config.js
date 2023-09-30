@@ -16,10 +16,10 @@ module.exports = withMT({
     extend: {
       colors: {
         primary: "#1E1E1E",
-        secondary: "#F7F7F9",
+        secondary: "#F7F7F7",
         textPrimary: "#747474",
         textSecondary: "#949494",
-        darkBg: colors.zinc[900],
+        darkBg: "#161616",
       },
       backgroundImage: {
         hero: "url('../public/hero.png')",
