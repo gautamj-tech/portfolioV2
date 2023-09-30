@@ -7,6 +7,7 @@ import Link from "next/link";
 import { SUPABASE_ANON_KEY, SUPABASE_URL } from "@/config/keys";
 import { createClient } from "@supabase/supabase-js";
 
+
 const AboutHero = () => {
   const [work, setWork] = useState([]);
   const [loading, setLoading] = useState(true);
