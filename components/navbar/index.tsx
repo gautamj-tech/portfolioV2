@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Logo from "@/assets/images/logo_2.png";
-import LogoLight from "@/assets/images/logo_2-light.png";
 import Link from "next/link";
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { RiTwitterXFill } from 'react-icons/ri'
 import { CiDark, CiMenuFries } from "react-icons/ci";
 import { AiOutlineClose } from 'react-icons/ai'
 import { MdLightMode } from "react-icons/md";
@@ -83,7 +80,7 @@ const Navbar = () => {
         </Link>
 
         <Link href="https://twitter.com/ThilanBawantha" target="_blank">
-          <FaTwitter className="text-textPrimary dark:text-white text-md" />
+          <RiTwitterXFill className="text-textPrimary dark:text-white text-md" />
         </Link>
 
         <Link href="https://www.instagram.com/bawwa_/" target="_blank">

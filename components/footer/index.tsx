@@ -1,5 +1,6 @@
 import React from "react";
-import { AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai";
+import { AiOutlineGithub } from "react-icons/ai";
+import { RiTwitterXFill } from 'react-icons/ri'
 import Link from "next/link";
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
         <div className=" flex flex-row gap-5 items-center ">
           <div className="social-links  gap-5 flex">
             <Link href="https://twitter.com/ThilanBawantha" target="_blank">
-              <AiOutlineTwitter className="text-textPrimary text-2xl" />
+              <RiTwitterXFill className="text-textPrimary text-2xl" />
             </Link>
             <Link href="https://github.com/Bawanthathilan" target="_blank">
               <AiOutlineGithub className="text-textPrimary text-2xl" />
