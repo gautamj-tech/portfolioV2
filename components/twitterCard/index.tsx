@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineTwitter } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
 import { RiTwitterXFill } from 'react-icons/ri'
 
 interface TwitterCardProps {
@@ -20,10 +20,10 @@ const TwitterCard = ({ name, handle, comment, linkedin }: TwitterCardProps) => {
         </h3>
 
         {handle && (
-          <AiOutlineTwitter className="text-[#0075b5] text-2xl group-hover:text-white" />
+          <RiTwitterXFill className="text-[#0075b5] text-2xl group-hover:text-white" />
         )}
         {linkedin && (
-          <RiTwitterXFill className="text-[#0075b5] text-2xl group-hover:text-white" />
+          <FaLinkedin className="text-[#0075b5] text-2xl group-hover:text-white" />
         )}
       </div>
 
