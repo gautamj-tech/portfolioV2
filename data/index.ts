@@ -83,6 +83,6 @@ export const menuData = [
     link: "https://blog.bawantha.me/",
   }, {
     name: "Contact",
-    link: "/contact",
+    link: "/#contact",
   }
 ]
