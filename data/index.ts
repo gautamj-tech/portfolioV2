@@ -80,7 +80,7 @@ export const menuData = [
     link: "/guestbook",
   }, {
     name: "Blog",
-    link: "https://blog.bawantha.me/",
+    link: "https://bawanthathilan.hashnode.dev",
   }, {
     name: "Contact",
     link: "/#contact",
