@@ -4,15 +4,27 @@ import BlogCard from "./blogCard";
 
 const query = `
     {
-      user(username: "bawanthathilan") {
-        publication {
-          posts{
-            slug
-            title
-            brief
-            coverImage
+      publication(host:"bawanthathilan.hashnode.dev"){
+        isTeam
+        title
+        about{
+          markdown
+        }
+        
+        posts(first: 1) {
+          edges {
+            node {
+              slug
+              title
+              brief
+              url
+              coverImage{
+                url
+              }
+            }
           }
         }
+        
       }
     }
   `;
@@ -28,7 +40,7 @@ export class BlogPosts extends Component {
   }
 
   fetchPosts = async () => {
-    const response = await fetch("https://api.hashnode.com", {
+    const response = await fetch("https://gql.hashnode.com/", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -36,9 +48,10 @@ export class BlogPosts extends Component {
       body: JSON.stringify({ query }),
     });
     const ApiResponse = await response.json();
+    console.log(ApiResponse);
 
     this.setState({
-      posts: ApiResponse.data.user.publication.posts[0],
+      posts: ApiResponse.data.publication.posts.edges[0].node,
       loading: false,
     });
   };
