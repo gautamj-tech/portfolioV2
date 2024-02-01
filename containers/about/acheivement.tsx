@@ -14,6 +14,7 @@ const Acheivement = () => {
     try {
       setLoading(true);
       const { data, error }: any = await supabase
+
         .from('achivements')
         .select()
         .order('id', { ascending: true });
