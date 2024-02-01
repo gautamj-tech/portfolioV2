@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
-import { createClient } from "@supabase/supabase-js";
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from "../config/keys";
-import { AiOutlineGithub } from "react-icons/ai";
-import ContentLoader from "react-content-loader";
-import Title from "@/components/Title";
+import React, { useState, useEffect } from 'react';
+import { useSession, signIn, signOut } from 'next-auth/react';
+import { createClient } from '@supabase/supabase-js';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../config/keys';
+import { AiOutlineGithub } from 'react-icons/ai';
+import ContentLoader from 'react-content-loader';
+import Title from '@/components/Title';
 
 const Guestbook = () => {
   const { data: session }: any = useSession<any>();
   const [loading, setLoading] = useState<boolean>(false);
-  const [message, setMessage] = useState<any>("");
+  const [message, setMessage] = useState<any>('');
   const [userMsg, setUserMsg] = useState<any>([]);
 
   const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -18,9 +18,9 @@ const Guestbook = () => {
     try {
       setLoading(true);
       const { data, error } = await supabase
-        .from("guestbook")
+        .from('guestbook')
         .select()
-        .order("created_at", { ascending: false });
+        .order('created_at', { ascending: false });
 
       setMessage(data);
       console.log(data);
@@ -41,14 +41,14 @@ const Guestbook = () => {
   const createMessage = async (e: any) => {
     e.preventDefault();
     try {
-      const { data, error }: any = await supabase.from("guestbook").insert([
+      const { data, error }: any = await supabase.from('guestbook').insert([
         {
           message: userMsg,
           user_id: session?.user?.id,
-          username: session?.user?.name,
-        },
+          username: session?.user?.name
+        }
       ]);
-      setUserMsg("");
+      setUserMsg('');
       getGuestBookData();
     } catch (error) {
       console.log(error);
@@ -93,7 +93,7 @@ const Guestbook = () => {
               >
                 <span>
                   <AiOutlineGithub size={20} />
-                </span>{" "}
+                </span>{' '}
                 Sign out
               </button>
             </div>
@@ -119,11 +119,11 @@ const Guestbook = () => {
                     className="flex flex-row gap-5 bg-secondary p-5 rounded-xl justify-between mt-5"
                   >
                     <div className="left flex flex-row gap-5">
-                      <p style={{ color: "#525252" }}>{item.username} : </p>
-                      <p style={{ color: "#525252" }}>{item.message}</p>
+                      <p style={{ color: '#525252' }}>{item.username} : </p>
+                      <p style={{ color: '#525252' }}>{item.message}</p>
                     </div>
 
-                    <p style={{ color: "#525252" }}>{item.created_at}</p>
+                    <p style={{ color: '#525252' }}>{item.created_at}</p>
                   </div>
                 ))}
             </div>
@@ -133,12 +133,12 @@ const Guestbook = () => {
             <div className=" flex flex-col justify-center">
               <h4>Your are not signed in</h4> <br />
               <button
-                onClick={() => signIn("github")}
+                onClick={() => signIn('github')}
                 className=" bg-gray-900 flex flex-row justify-center gap-5 rounded-xl text-white px-5 py-3"
               >
                 <span>
                   <AiOutlineGithub size={20} />
-                </span>{" "}
+                </span>{' '}
                 Sign in with Github
               </button>
             </div>
@@ -164,11 +164,11 @@ const Guestbook = () => {
                     className="flex flex-row gap-5 bg-secondary p-5 rounded-xl justify-between"
                   >
                     <div className="left flex flex-row gap-5">
-                      <p style={{ color: "#525252" }}>{item.username} : </p>
-                      <p style={{ color: "#525252" }}>{item.message}</p>
+                      <p style={{ color: '#525252' }}>{item.username} : </p>
+                      <p style={{ color: '#525252' }}>{item.message}</p>
                     </div>
 
-                    <p style={{ color: "#525252" }}>{item.created_at}</p>
+                    <p style={{ color: '#525252' }}>{item.created_at}</p>
                   </div>
                 ))}
             </div>

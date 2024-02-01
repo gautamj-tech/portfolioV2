@@ -1,16 +1,16 @@
-import React from "react";
-import Marqueee from "react-fast-marquee";
-import { comments } from "@/data";
-import TwitterCard from "../twitterCard";
-import { useTheme } from "next-themes";
+import React from 'react';
+import Marqueee from 'react-fast-marquee';
+import { comments } from '@/data';
+import TwitterCard from '../twitterCard';
+import { useTheme } from 'next-themes';
 
 const Marquee = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
     <div className=" w-full">
       <Marqueee
-        gradient={currentTheme === "dark" ? false : true}
+        gradient={currentTheme === 'dark' ? false : true}
         gradientWidth={100}
         pauseOnHover={true}
         className="marq"

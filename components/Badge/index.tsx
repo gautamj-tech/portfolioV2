@@ -1,17 +1,17 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 export const Badge = ({ text, url }: string | any) => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
     <a
       href={`${url}`}
       target="__blank"
       className={`${
-        currentTheme === "dark" ? "bg-slate-900" : "bg-black"
+        currentTheme === 'dark' ? 'bg-slate-900' : 'bg-black'
       } no-underline group mb-0 cursor-pointer relative  shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block`}
     >
       <span className="absolute inset-0 overflow-hidden rounded-full">

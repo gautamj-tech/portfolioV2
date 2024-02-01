@@ -1,9 +1,9 @@
-import React, { useState, MouseEvent, useCallback } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { BsArrowUpRightCircle } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
+import React, { useState, MouseEvent, useCallback } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
+import { BsArrowUpRightCircle } from 'react-icons/bs';
+import { FaGithub } from 'react-icons/fa';
 
 interface ProjectCardProps {
   title: string;
@@ -56,7 +56,7 @@ const ProjectCard = ({
   link,
   github,
   category,
-  tech,
+  tech
 }: ProjectCardProps) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
@@ -72,9 +72,9 @@ const ProjectCard = ({
       y: 16,
       squares: [
         [0, 1],
-        [1, 3],
-      ],
-    },
+        [1, 3]
+      ]
+    }
   };
 
   return (
@@ -109,9 +109,7 @@ const ProjectCard = ({
         </div>
       </div>
 
-      <div
-        className="image relative h-[400px] transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform"
-      >
+      <div className="image relative h-[400px] transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform">
         <Image
           src={image}
           alt={`${title}`}

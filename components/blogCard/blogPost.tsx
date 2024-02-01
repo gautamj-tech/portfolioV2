@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import ContentLoader from "react-content-loader";
-import BlogCard from "./blogCard";
+import React, { Component } from 'react';
+import ContentLoader from 'react-content-loader';
+import BlogCard from './blogCard';
 
 const query = `
     {
@@ -32,7 +32,7 @@ const query = `
 export class BlogPosts extends Component {
   state: any = {
     posts: [],
-    loading: true,
+    loading: true
   };
 
   componentDidMount() {
@@ -40,19 +40,19 @@ export class BlogPosts extends Component {
   }
 
   fetchPosts = async () => {
-    const response = await fetch("https://gql.hashnode.com/", {
-      method: "POST",
+    const response = await fetch('https://gql.hashnode.com/', {
+      method: 'POST',
       headers: {
-        "Content-type": "application/json",
+        'Content-type': 'application/json'
       },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ query })
     });
     const ApiResponse = await response.json();
     console.log(ApiResponse);
 
     this.setState({
       posts: ApiResponse.data.publication.posts.edges[0].node,
-      loading: false,
+      loading: false
     });
   };
 

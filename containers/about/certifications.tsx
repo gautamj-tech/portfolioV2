@@ -1,9 +1,9 @@
-import React from "react";
-import Title from "@/components/Title";
-import Image from "next/image";
-import Link from "next/link";
-import AZ900 from "@/assets/images/az_900.png";
-import CNCF from "@/assets/images/cncf.png";
+import React from 'react';
+import Title from '@/components/Title';
+import Image from 'next/image';
+import Link from 'next/link';
+import AZ900 from '@/assets/images/az_900.png';
+import CNCF from '@/assets/images/cncf.png';
 
 const Certifications = () => {
   return (

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { createClient } from "@supabase/supabase-js";
-import Title from "@/components/Title";
-import { SUPABASE_ANON_KEY, SUPABASE_URL } from "@/config/keys";
+import React, { useState, useEffect } from 'react';
+import { createClient } from '@supabase/supabase-js';
+import Title from '@/components/Title';
+import { SUPABASE_ANON_KEY, SUPABASE_URL } from '@/config/keys';
 
 const Experience = () => {
   const [work, setWork] = useState([]);
@@ -12,9 +12,9 @@ const Experience = () => {
     try {
       setLoading(true);
       const { data, error }: any = await supabase
-        .from("work")
+        .from('work')
         .select()
-        .order("id", { ascending: true });
+        .order('id', { ascending: true });
       setWork(data);
       setLoading(false);
       if (error) throw error;

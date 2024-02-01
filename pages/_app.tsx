@@ -1,11 +1,11 @@
-import React from "react";
-import "@/styles/globals.scss";
-import type { AppProps } from "next/app";
-import Layout from "@/components/layout";
-import { ThemeProvider } from "next-themes";
-import { SessionProvider } from "next-auth/react";
-import LoadingScreen from "@/components/LoadingScreen";
-import { Analytics } from "@vercel/analytics/react";
+import React from 'react';
+import '@/styles/globals.scss';
+import type { AppProps } from 'next/app';
+import Layout from '@/components/layout';
+import { ThemeProvider } from 'next-themes';
+import { SessionProvider } from 'next-auth/react';
+import LoadingScreen from '@/components/LoadingScreen';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps, session }: any) {
   const [loading, setLoading] = React.useState(false);

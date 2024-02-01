@@ -1,6 +1,6 @@
-import React from "react";
-import Title from "@/components/Title";
-import Image from "next/image";
+import React from 'react';
+import Title from '@/components/Title';
+import Image from 'next/image';
 
 const Slider = () => {
   return (

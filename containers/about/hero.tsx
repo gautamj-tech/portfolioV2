@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import myImg from "@/assets/images/myImg.png";
-import { motion } from "framer-motion";
-import { BsStackOverflow } from "react-icons/bs";
-import Link from "next/link";
-import { SUPABASE_ANON_KEY, SUPABASE_URL } from "@/config/keys";
-import { createClient } from "@supabase/supabase-js";
-
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import myImg from '@/assets/images/myImg.png';
+import { motion } from 'framer-motion';
+import { BsStackOverflow } from 'react-icons/bs';
+import Link from 'next/link';
+import { SUPABASE_ANON_KEY, SUPABASE_URL } from '@/config/keys';
+import { createClient } from '@supabase/supabase-js';
 
 const AboutHero = () => {
   const [work, setWork] = useState([]);
@@ -17,9 +16,9 @@ const AboutHero = () => {
     try {
       setLoading(true);
       const { data, error }: any = await supabase
-        .from("work")
+        .from('work')
         .select()
-        .order("id", { ascending: true });
+        .order('id', { ascending: true });
       setWork(data);
       setLoading(false);
       if (error) throw error;

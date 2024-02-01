@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "npx prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -37,7 +39,8 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "prettier": "^3.0.0",
+    "husky": "^9.0.8",
+    "prettier": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.4.1"
   }
 }

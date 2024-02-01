@@ -1,6 +1,6 @@
-import React from "react";
-import Title from "@/components/Title";
-import BlogPosts from "@/components/blogCard/blogPost";
+import React from 'react';
+import Title from '@/components/Title';
+import BlogPosts from '@/components/blogCard/blogPost';
 
 const Blog = () => {
   return (

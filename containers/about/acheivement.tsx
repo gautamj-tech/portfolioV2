@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Title from "@/components/Title";
-import Image from "next/image";
-import { SUPABASE_ANON_KEY, SUPABASE_URL } from "@/config/keys";
-import { createClient } from "@supabase/supabase-js";
-import Link from "next/link";
+import React, { useState, useEffect } from 'react';
+import Title from '@/components/Title';
+import Image from 'next/image';
+import { SUPABASE_ANON_KEY, SUPABASE_URL } from '@/config/keys';
+import { createClient } from '@supabase/supabase-js';
+import Link from 'next/link';
 
 const Acheivement = () => {
   const [loading, setLoading] = useState(true);
@@ -14,9 +14,9 @@ const Acheivement = () => {
     try {
       setLoading(true);
       const { data, error }: any = await supabase
-        .from("achivements")
+        .from('achivements')
         .select()
-        .order("id", { ascending: true });
+        .order('id', { ascending: true });
       setAchievements(data);
       setLoading(false);
       if (error) throw error;

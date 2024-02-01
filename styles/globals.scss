@@ -10,10 +10,9 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-
 }
 
-.titleFont{
+.titleFont {
   font-family: 'DM Sans', sans-serif;
 }
 
@@ -39,7 +38,7 @@ $text-color: rgba(#000, 0.8);
       stroke: $text-color;
       stroke-dashoffset: $path-length;
       stroke-dasharray: $path-length;
-      stroke-linecap:round;
+      stroke-linecap: round;
       animation: anim 5s ease forwards;
       @keyframes anim {
         0% {

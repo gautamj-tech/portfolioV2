@@ -1,6 +1,6 @@
-import React from "react";
-import { FaLinkedin } from "react-icons/fa";
-import { RiTwitterXFill } from 'react-icons/ri'
+import React from 'react';
+import { FaLinkedin } from 'react-icons/fa';
+import { RiTwitterXFill } from 'react-icons/ri';
 
 interface TwitterCardProps {
   name: string;

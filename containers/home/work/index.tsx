@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import Title from "@/components/Title";
-import ProjectCard from "@/components/projectCard";
+import React, { useEffect } from 'react';
+import Title from '@/components/Title';
+import ProjectCard from '@/components/projectCard';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 // import required modules
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from 'swiper';
 
-import { createClient } from "@supabase/supabase-js";
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from "@/config/keys";
+import { createClient } from '@supabase/supabase-js';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '@/config/keys';
 
 const Work = () => {
   const [projectsData, setProjectsData] = React.useState<any>([]); // Store data from Supabase
@@ -23,9 +23,9 @@ const Work = () => {
     try {
       setLoading(true);
       const { data, error } = await supabase
-        .from("projects")
+        .from('projects')
         .select()
-        .order("id", { ascending: true });
+        .order('id', { ascending: true });
 
       setProjectsData(data);
       setLoading(false);
@@ -50,34 +50,34 @@ const Work = () => {
           slidesPerView={2}
           spaceBetween={30}
           pagination={{
-            clickable: true,
+            clickable: true
           }}
           modules={[Pagination, Navigation]}
           breakpoints={{
             // when window width is >= 320px
             320: {
               slidesPerView: 1,
-              spaceBetween: 20,
+              spaceBetween: 20
             },
             // when window width is >= 480px
             480: {
               slidesPerView: 1,
-              spaceBetween: 30,
+              spaceBetween: 30
             },
             // when window width is >= 640px
             640: {
               slidesPerView: 1,
-              spaceBetween: 30,
+              spaceBetween: 30
             },
             1000: {
               slidesPerView: 2,
-              spaceBetween: 30,
+              spaceBetween: 30
             },
 
             1900: {
               slidesPerView: 2,
-              spaceBetween: 30,
-            },
+              spaceBetween: 30
+            }
           }}
         >
           {projectsData.map((project: any, index: number) => (

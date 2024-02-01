@@ -1,7 +1,7 @@
-import React from "react";
-import { AiOutlineGithub } from "react-icons/ai";
-import { RiTwitterXFill } from 'react-icons/ri'
-import Link from "next/link";
+import React from 'react';
+import { AiOutlineGithub } from 'react-icons/ai';
+import { RiTwitterXFill } from 'react-icons/ri';
+import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="py-5 px-5 bg-secondary  dark:bg-darkBg">
