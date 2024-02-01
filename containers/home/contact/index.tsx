@@ -17,11 +17,12 @@ const Contact = () => {
           <span className="titleFont dark:text-white">amazing ! </span>
         </h1>
 
-        <div className="line h-[0.5px] w-1/2 bg-textSecondary hidden md:inline-block lg:inline-block"></div>
-
-        <h3 className="text-primary text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white">
-          hello@bawantha.me
-        </h3>
+        <a
+          href="mailto:bawantharathnayaka@gmail.com"
+          className="text-primary text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white underline"
+        >
+          bawantharathnayaka@gmail.com
+        </a>
 
         <svg
           width="397"
@@ -29,7 +30,7 @@ const Contact = () => {
           viewBox="0 0 397 238"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute -bottom-5 right-0 opacity-40 w-80 hidden md:block md:w-[300px]"
+          className="absolute -bottom-10 right-0 opacity-40 w-80 hidden md:block md:w-[300px]"
         >
           <g clipPath="url(#clip0_3_58)">
             <path
