@@ -19,9 +19,9 @@ const Contact = () => {
 
         <a
           href="mailto:bawantharathnayaka@gmail.com"
-          className="text-primary text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white underline"
+          className="text-primary text-2xl sm:text-2xl lg:text-2xl font-bold dark:text-white  bg-[#7043EC] w-60 flex items-center justify-center rounded-md p-2"
         >
-          bawantharathnayaka@gmail.com
+          Send an email
         </a>
 
         <svg
